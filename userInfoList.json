@@ -3,7 +3,7 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": "d4",
-      "solvedCount": 2797
+      "solvedCount": 2800
     },
     "cubic": {
       "rank": "d3",
@@ -13,17 +13,17 @@
       "rank": "p4",
       "solvedCount": 919
     },
+    "hjkiln": {
+      "rank": "g1",
+      "solvedCount": 846
+    },
     "castberry": {
       "rank": "p4",
       "solvedCount": 844
     },
-    "hjkiln": {
-      "rank": "g1",
-      "solvedCount": 843
-    },
     "soumatou": {
       "rank": "g2",
-      "solvedCount": 717
+      "solvedCount": 720
     },
     "gylim7826": {
       "rank": "g2",
@@ -39,15 +39,19 @@
     },
     "kye04250425": {
       "rank": "g3",
-      "solvedCount": 307
+      "solvedCount": 311
     },
     "wschoi789": {
       "rank": "g3",
-      "solvedCount": 301
+      "solvedCount": 302
     },
     "qwer0987": {
       "rank": "g3",
       "solvedCount": 269
+    },
+    "k2akr7": {
+      "rank": "g2",
+      "solvedCount": 228
     },
     "mule129": {
       "rank": "g3",
@@ -57,21 +61,17 @@
       "rank": "g3",
       "solvedCount": 222
     },
-    "k2akr7": {
-      "rank": "g3",
-      "solvedCount": 222
-    },
     "hyun021218": {
       "rank": "s1",
-      "solvedCount": 202
+      "solvedCount": 203
     },
     "mouiye": {
       "rank": "s2",
       "solvedCount": 173
     },
     "kgh398": {
-      "rank": "s2",
-      "solvedCount": 122
+      "rank": "s1",
+      "solvedCount": 127
     },
     "binhan1e3": {
       "rank": "s1",
@@ -90,5 +90,5 @@
       "solvedCount": 64
     }
   },
-  "lastUpdate": "2026-03-17T15:51:40.473Z"
+  "lastUpdate": "2026-03-18T15:58:24.084Z"
 }
