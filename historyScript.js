@@ -29,6 +29,11 @@ async function init() {
 function renderLogs(page) {
     if (!logData || !logData.log) return;
 
+    if (logData.length < 1) {
+        document.getElementById('log-container').innerHTML = 
+            `<p class="text-center text-red-500 py-10">앗! 아직 변경사항이 없어요...</p>`;
+        return;
+    }
     const container = document.getElementById('log-container');
     container.innerHTML = '';
     
