@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css');
+
+.home-fab {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #e0f2fe; /* blue-100 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6; /* blue-500 */
+    box-shadow: 0 4px 12px rgba(186, 230, 253, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.home-fab:hover {
+    transform: scale(1.1);
+    background-color: #eff6ff; /* blue-50 */
+    box-shadow: 0 6px 16px rgba(186, 230, 253, 0.6);
+}
+
+/* 모바일에서는 버튼이 너무 크지 않게 조절 */
+@media (max-width: 767px) {
+    .home-fab {
+        top: 15px;
+        left: 15px;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+body { 
+    font-family: 'SUIT Variable', sans-serif; 
+    background-color: #fcfdfe; 
+    color: #1e293b;
+    /* 모바일에서 불필요한 가로 스크롤 방지 */
+    overflow-x: hidden;
+}
+
+/* 로그 아이템 애니메이션 및 효과 */
+.log-item { 
+    animation: fadeIn 0.4s ease-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.log-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
+}
+
+/* 모바일 전용 스타일 (화면 너비 768px 미만) */
+@media (max-width: 767px) {
+    .log-item h2 {
+        /* 글자 크기를 작게 조절 (기존보다 작게) */
+        font-size: 1.1rem !important; 
+        /* 한 줄 유지를 위한 핵심 설정 */
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; /* 글자가 너무 길면 ... 처리 */
+        flex-shrink: 1;
+    }
+    
+    .log-item {
+        /* 모바일에서 좌우 패딩을 살짝 줄여 공간 확보 */
+        padding: 1rem !important;
+        /* 날짜와 한 줄에 배치하기 위해 flex-direction 유지 */
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .log-item time {
+        font-size: 0.75rem !important;
+        margin-top: 0 !important;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

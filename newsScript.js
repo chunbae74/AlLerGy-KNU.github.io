@@ -66,7 +66,7 @@ function renderLogs(page) {
             <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight">
                 <a href="${profileUrl}" target="_blank" rel="noopener noreferrer" 
                    class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1">
-                    @${item.id}
+                    @${item.userId}
                 </a>님, ${item.text}
             </h2>
             <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter">
@@ -79,14 +79,24 @@ function renderLogs(page) {
     updateUI(false);
 }
 
-function updateUI() {
-    const totalPages = Math.ceil(logData.log.length / itemsPerPage) || 1;
-    document.getElementById('page-info').innerText = `${currentPage} / ${totalPages}`;
-    document.getElementById('prev-btn').disabled = currentPage === 1;
-    document.getElementById('next-btn').disabled = currentPage === totalPages;
+function updateUI(isEmpty) {
+    const paginationNav = document.querySelector('nav');
+    const lastUpdateElement = document.getElementById('last-update');
     
-    const lastUpdateDate = new Date(logData.lastUpdate).toLocaleDateString();
-    document.getElementById('last-update').innerText = `Last updated:  ${lastUpdateDate}\n※ 활동 이력은 매일 자정에 업데이트됩니다.`;
+    if (isEmpty) {
+        if(paginationNav) paginationNav.style.display = 'none';
+        lastUpdateElement.innerText = 'No updates found';
+    } else {
+        if(paginationNav) paginationNav.style.display = 'flex';
+        const totalPages = Math.ceil(logData.log.length / itemsPerPage) || 1;
+        document.getElementById('page-info').innerText = `${currentPage} / ${totalPages}`;
+        document.getElementById('prev-btn').disabled = currentPage === 1;
+        document.getElementById('next-btn').disabled = currentPage === totalPages;
+        
+        const lastUpdateDate = new Date(logData.lastUpdate).toLocaleDateString();
+        // 줄바꿈 적용을 위해 innerHTML 사용
+        lastUpdateElement.innerHTML = `Last updated: ${lastUpdateDate}<br><span class="text-[11px] opacity-70">※ News는 매일 자정에 업데이트됩니다.</span>`;
+    }
 }
 
 function setupEventListeners() {

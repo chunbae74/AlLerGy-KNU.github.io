@@ -8,7 +8,7 @@ const url = {
 const path = {
     'userIdList' : "./userIdList.json",
     'userInfoList' : "./userInfoList.json",
-    'history' : './history.json'
+    'news' : './news.json'
 };
 
 const headers = {
@@ -25,7 +25,7 @@ async function getUserInfoList() {
         let hasPreUserInfo = true;
         let userIdList = JSON.parse(fs.readFileSync(path['userIdList'], 'utf8')); // userIdList
         let preUserInfoList = null; // 업데이트 이전의 userInfoList
-        let history = null; // 티어 변동 및 n백번 째 문제 풀이 달성 히스토리
+        let news = null; // 티어 변동 및 n백번 째 문제 풀이 달성 히스토리
         const today = new Date().toString();
 
         if (!fs.existsSync(path['userInfoList'])) {
@@ -34,10 +34,10 @@ async function getUserInfoList() {
             preUserInfoList = JSON.parse(fs.readFileSync(path['userInfoList'], 'utf8'));
         }
 
-        if (!fs.existsSync(path['history'])) {
-            fs.writeFileSync(path['history'], JSON.stringify({log: [], lastUpdate: ""}));
+        if (!fs.existsSync(path['news'])) {
+            fs.writeFileSync(path['news'], JSON.stringify({log: [], lastUpdate: ""}));
         } 
-        history = JSON.parse(fs.readFileSync(path['history']));
+        news = JSON.parse(fs.readFileSync(path['news']));
 
         /*
          ************
@@ -62,22 +62,26 @@ async function getUserInfoList() {
                         const preTier = preUserInfo['rank'];
                         const nowTier = ranks[userInfo['tier']];
                         if (preTier != nowTier) {
-                            history['log'].unshift({
+                            news['log'].unshift({
                                 date: today,
-                                id: userId,
-                                text: `티어 상승! (${preTier} → ${nowTier})`
+                                userId: userId,
+                                text: `티어 상승 ! (${preTier} → ${nowTier})`
                             });
                         }
 
                         // n백번째 문제풀이 달성 히스토리
                         const preSolvedCount = Number(preUserInfo['solvedCount']);
                         const nowSolvedCount = Number(userInfo['solvedCount']);
-                        if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
-                            history['log'].unshift({
-                                date: today,
-                                id: userId,
-                                text: `문제 ${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}개 해결!!`
-                            });
+                        if (nowSolvedCount < 100) {
+
+                        } else {
+                            if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
+                                news['log'].unshift({
+                                    date: today,
+                                    userId: userId,
+                                    text: `${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}문제 해결 !`
+                                });
+                            }
                         }
                     }
                 }
@@ -115,8 +119,8 @@ async function getUserInfoList() {
             lastUpdate: today
         }, null, 2));
 
-        history['lastUpdate'] = today;
-        fs.writeFileSync(path['history'], JSON.stringify(history, null, 4));
+        news['lastUpdate'] = today;
+        fs.writeFileSync(path['news'], JSON.stringify(news, null, 4));
 
     } catch (error) {
         console.error("[getUserList] 오류 발생:", error.stack);
