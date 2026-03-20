@@ -5,6 +5,12 @@ const url = {
     'profile': 'https://solved.ac/api/v3/user/show?handle='
 };
 
+const path = {
+    'userIdList' : "./userIdList.json",
+    'userInfoList' : "./userInfoList.json",
+    'news' : './news.json'
+};
+
 const headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
@@ -15,12 +21,77 @@ const ranks = ["unranked", "b5", "b4", "b3", "b2", "b1", "s5", "s4", "s3", "s2",
 
 async function getUserInfoList() {
     try {
-        const data = fs.readFileSync('./userIdList.json', 'utf8');
-        
-        const { userIdList } = JSON.parse(data);const promises = userIdList.map(async (userId) => {
+        // 이 프로그램이 촤초로 실행되었는가
+        let hasPreUserInfo = true;
+        let userIdList = JSON.parse(fs.readFileSync(path['userIdList'], 'utf8')); // userIdList
+        let preUserInfoList = null; // 업데이트 이전의 userInfoList
+        let news = null; // 티어 변동 및 n백번 째 문제 풀이 달성 히스토리
+        const today = new Date().toString();
+
+        if (!fs.existsSync(path['userInfoList'])) {
+            hasPreUserInfo = false;
+        } else {
+            preUserInfoList = JSON.parse(fs.readFileSync(path['userInfoList'], 'utf8'));
+        }
+
+        if (!fs.existsSync(path['news'])) {
+            fs.writeFileSync(path['news'], JSON.stringify({log: [], lastUpdate: ""}));
+        } 
+        news = JSON.parse(fs.readFileSync(path['news']));
+
+        /*
+         ************
+         * userInfoList.json 업데이트
+         ************
+         */
+        const promises = userIdList['userIdList'].map(async (userId) => {
             if (userId) {
                 // getRank(비동기 함수)를 여기서 호출하지만 기다리지 않고 Promise만 반환합니다.
                 const userInfo = await getUserInfo(userId);
+
+                /*
+                 ************
+                 *티어 변동 확인 및 n백번째 문제풀이 진행
+                 ************
+                */
+                if (hasPreUserInfo) {
+                    if (preUserInfoList['users'][userId]) {
+                        const preUserInfo = preUserInfoList['users'][userId];
+                        
+                        // 티어 변동 확인
+                        const preTier = preUserInfo['rank'];
+                        const nowTier = ranks[userInfo['tier']];
+                        if (preTier != nowTier) {
+                            news['log'].unshift({
+                                date: today,
+                                userId: userId,
+                                text: `티어 상승 ! (${preTier} → ${nowTier})`
+                            });
+                        }
+
+                        // n백번째 문제풀이 달성 히스토리
+                        const preSolvedCount = Number(preUserInfo['solvedCount']);
+                        const nowSolvedCount = Number(userInfo['solvedCount']);
+                        if (nowSolvedCount < 100) {
+                            if (Math.floor(preSolvedCount / 10) != Math.floor(nowSolvedCount / 10)) {
+                                news['log'].unshift({
+                                    date: today,
+                                    userId: userId,
+                                    text: `${(Math.floor(nowSolvedCount / 10)*10).toLocaleString()}문제 해결 !`
+                                });
+                            }
+                        } else {
+                            if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
+                                news['log'].unshift({
+                                    date: today,
+                                    userId: userId,
+                                    text: `${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}문제 해결 !`
+                                });
+                            }
+                        }
+                    }
+                }
+
                 return {
                     userId: userId,
                     data: {
@@ -48,14 +119,17 @@ async function getUserInfoList() {
         });
 
         const sortedUsers = Object.fromEntries(sortedEntries);
-
-        fs.writeFileSync('userInfoList.json', JSON.stringify({
+        fs.writeFileSync(path['userInfoList'], JSON.stringify({
             userCount: Object.keys(sortedUsers).length,
             users: sortedUsers,
-            lastUpdate: new Date().toISOString()
+            lastUpdate: today
         }, null, 2));
+
+        news['lastUpdate'] = today;
+        fs.writeFileSync(path['news'], JSON.stringify(news, null, 4));
+
     } catch (error) {
-        console.error("[getUserList] 오류 발생:", error.message);
+        console.error("[getUserList] 오류 발생:", error.stack);
         process.exit(1); // 에러 발생 시 Actions가 실패로 인식하게 함
     }
 }
@@ -67,8 +141,16 @@ async function getUserInfo(userId) {
         const data = response.data;
         return data;
     } catch (error) {
-        console.error("[getRank] 오류 발생:", error.message);
-        process.exit(1); // 에러 발생 시 Actions가 실패로 인식하게 함
+        if (error.response) {
+            if (error.response.status == 404) {
+                return {
+                    'handle': userId,
+                    'tier': 0,
+                    'solvedCount': null
+                };
+            }
+        }
+        console.error(`[getRank] 오류 발생:\nuserId: ${userId}\n`, error.stack);
     }
 }
 

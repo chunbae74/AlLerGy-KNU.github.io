@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="./img/logo/logo1x.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlLerGy News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="newsStyle.css">
+</head>
+<body class="py-12 px-6">
+    <a href="https://chunbae74.github.io/AlLerGy-KNU.github.io/" class="home-fab" title="홈으로 이동">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </a>
+
+    <div id="app" class="max-w-2xl mx-auto">
+<div id="app" class="max-w-2xl mx-auto">
+    <header class="mb-12 pb-4">
+        <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 mb-2">AlLerGy News</h1>
+        <p id="last-update" class="text-sm font-medium text-blue-400"></p>
+    </header>
+
+    <div id="log-container" class="space-y-4">
+        </div>
+
+    <nav class="mt-12 flex justify-between items-center bg-white p-4 rounded-2xl border border-blue-50 shadow-sm">
+        <button id="prev-btn" class="px-4 py-2 text-sm font-bold text-blue-600 hover:bg-blue-50 rounded-xl disabled:text-slate-300 disabled:hover:bg-transparent transition-all cursor-pointer">
+            ← Prev
+        </button>
+        <span id="page-info" class="text-sm font-bold text-slate-400 tracking-widest"></span>
+        <button id="next-btn" class="px-4 py-2 text-sm font-bold text-blue-600 hover:bg-blue-50 rounded-xl disabled:text-slate-300 disabled:hover:bg-transparent transition-all cursor-pointer">
+            Next →
+        </button>
+    </nav>
+</div>
+
+<script src="newsScript.js"></script>
+</body>
+</html>

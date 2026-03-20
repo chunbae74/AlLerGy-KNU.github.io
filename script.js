@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         const jsonData = await response.json();
         const users = jsonData.users;
 
+        // 전체 멤버 수 표기
+        const memberTitle = document.getElementById("memberTitle");
+        if (memberTitle) memberTitle.innerHTML = `멤버 (${Object.keys(users).length}명)`;
+
+
         Object.entries(users).forEach(([solvedId, info]) => {
             const { rank, solvedCount } = info;
 
@@ -80,9 +85,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const textDiv = document.createElement("div");
                 textDiv.classList.add("members-container-context-text");
     
-                // 세자리마다 콤마 붙이기
-                const formattedCount = Number(solvedCount).toLocaleString();
-                textDiv.textContent = `${formattedCount}문제 해결`;
+                // 푼 문제 수 출력
+                // solved.ac 미가입 계정 예외처리
+                if (solvedCount == null) {
+                    textDiv.textContent = "Solved.ac 미가입";
+                } else {
+                    // 세 자리수마다 콤마 찍어주기
+                    const formattedCount = Number(solvedCount).toLocaleString();
+                    textDiv.textContent = `${formattedCount}문제 해결`;
+                }
     
                 contextDiv.appendChild(idDiv);
                 contextDiv.appendChild(textDiv);
@@ -112,10 +123,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 // 3. 스크롤 시 헤더 보이기 기능
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
-    if (header) {
-        if (window.scrollY > window.innerHeight - 50) {
+    if (window.innerWidth <= 768) {
+        // 모바일에서는 항상 표시
+        header.classList.add('show');
+    } else {
+        // PC에서는 기존 로직 유지 (예: 특정 스크롤 이상에서 표시)
+        if (window.scrollY > 100) {
             header.classList.add('show');
         } else {
             header.classList.remove('show');
