@@ -57,7 +57,7 @@ function renderLogs(page) {
         }).replace(/\.$/, "");
 
         // 리다이렉트할 주소
-        const profileUrl = `https://solved.ac/profile/${item.id}`;
+        const profileUrl = `https://solved.ac/profile/${item.userId}`;
 
         const card = document.createElement('div');
         card.className = "log-item bg-white p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4";
