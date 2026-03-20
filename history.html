@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlLerGy - Activity Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="show">
+        <div class="header-allergy-mom">
+            <div class="header-allergy">AlLerGy</div>
+            <nav class="header-g">
+                <a href="#hero">Home</a>
+                <a href="#activity-log">Activity Log</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-div">
+                <div class="hero-div-div1">LOG</div>
+                <div class="hero-div-div2">최근 <span class="hero-blue">활동 업데이트</span> 현황</div>
+            </div>
+        </section>
+
+        <section id="activity-log">
+            <div class="history-box">
+                <div class="history-box-left">
+                    RECENT<br>UPDATES
+                </div>
+                
+                <div class="history-box-right">
+                    <div class="history-box-right-line"></div>
+                    <div class="history-box-right-text" id="log-container">
+                        </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <div class="footer-box-info">AlLerGy KNU</div>
+            <div class="footer-box-context">
+                마지막 업데이트: <span id="last-update">-</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 제공해주신 JSON 데이터 예시
+        const data = {
+            "log": [
+                {
+                    "date": "Fri Mar 20 2026 17:48:37 GMT+0900",
+                    "id": "dnjsgudtjr11",
+                    "text": "문제 2,800개 해결!!"
+                },
+                {
+                    "date": "Fri Mar 20 2026 17:48:37 GMT+0900",
+                    "id": "soumatou",
+                    "text": "문제 700개 해결!!"
+                },
+                {
+                    "date": "Fri Mar 20 2026 17:48:10 GMT+0900",
+                    "id": "dnjsgudtjr11",
+                    "text": "티어 상승! (d3 → d4)"
+                }
+            ],
+            "lastUpdate": "Fri Mar 20 2026 17:48:37 GMT+0900"
+        };
+
+        function renderLogs() {
+            const container = document.getElementById('log-container');
+            const lastUpdateSpan = document.getElementById('last-update');
+            
+            lastUpdateSpan.innerText = new Date(data.lastUpdate).toLocaleString();
+
+            container.innerHTML = data.log.map(item => {
+                // 날짜 포맷팅 (예: 17:48:37)
+                const timeStr = new Date(item.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                
+                return `
+                    <div class="history-box-right-text-box">
+                        <div class="history-box-right-text-box-title">
+                            ${item.id} <span style="font-size: 0.6em; color: #804eff; margin-left: 10px;">${timeStr}</span>
+                        </div>
+                        <div class="history-box-right-text-box-text">
+                            ${item.text}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        window.onload = renderLogs;
+    </script>
+</body>
+</html>

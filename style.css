@@ -795,3 +795,29 @@ footer {
     height: 10px;
   }
 }
+
+/* 활동 로그용 추가 스타일 */
+#activity-log {
+    background: #24273A;
+    padding-top: 100px; /* 헤더 공간 확보 */
+}
+
+/* 타임라인 점의 테두리 색상을 포인트 컬러로 변경 */
+.history-box-right-text-box::before {
+    border: 3px solid #4631ff; /* 주신 스크롤바 메인 색상 적용 */
+}
+
+/* ID 텍스트 강조 */
+.history-box-right-text-box-title {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* 텍스트 줄바꿈 및 강조 */
+.history-box-right-text-box-text {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 5px;
+}
