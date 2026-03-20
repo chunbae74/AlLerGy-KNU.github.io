@@ -80,9 +80,15 @@ document.addEventListener("DOMContentLoaded", async function () {
                 const textDiv = document.createElement("div");
                 textDiv.classList.add("members-container-context-text");
     
-                // 세자리마다 콤마 붙이기
-                const formattedCount = Number(solvedCount).toLocaleString();
-                textDiv.textContent = `${formattedCount}문제 해결`;
+                // 푼 문제 수 출력
+                // solved.ac 미가입 계정 예외처리
+                if (solvedCount == null) {
+                    textDiv.textContent = "Solved.ac 미가입";
+                } else {
+                    // 세 자리수마다 콤마 찍어주기
+                    const formattedCount = Number(solvedCount).toLocaleString();
+                    textDiv.textContent = `${formattedCount}문제 해결`;
+                }
     
                 contextDiv.appendChild(idDiv);
                 contextDiv.appendChild(textDiv);

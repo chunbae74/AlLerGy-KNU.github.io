@@ -67,8 +67,12 @@ async function getUserInfo(userId) {
         const data = response.data;
         return data;
     } catch (error) {
-        console.error("[getRank] 오류 발생:", error.message);
-        process.exit(1); // 에러 발생 시 Actions가 실패로 인식하게 함
+        console.error(`[getRank] 오류 발생:\nuserId: ${userId}\n`, error.message);
+        return {
+            'handle': userId,
+            'tier': 0,
+            'solvedCount': null
+        };
     }
 }
 
