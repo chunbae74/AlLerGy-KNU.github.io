@@ -75,7 +75,7 @@
     },
     "bswoo04": {
       "rank": "s1",
-      "solvedCount": 178
+      "solvedCount": 179
     },
     "kim03881968": {
       "rank": "g2",
@@ -95,11 +95,11 @@
     },
     "kgh398": {
       "rank": "s1",
-      "solvedCount": 128
+      "solvedCount": 130
     },
     "lwtr": {
       "rank": "s4",
-      "solvedCount": 117
+      "solvedCount": 118
     },
     "binhan1e3": {
       "rank": "s1",
@@ -119,7 +119,7 @@
     },
     "nogtac": {
       "rank": "s5",
-      "solvedCount": 80
+      "solvedCount": 82
     },
     "ohjh8446": {
       "rank": "s5",
@@ -154,12 +154,12 @@
       "solvedCount": 42
     },
     "tnfls": {
-      "rank": "b4",
-      "solvedCount": 30
+      "rank": "b3",
+      "solvedCount": 33
     },
     "seungyeon89": {
       "rank": "b4",
-      "solvedCount": 30
+      "solvedCount": 32
     },
     "ahs226ahs": {
       "rank": "b3",
@@ -173,13 +173,13 @@
       "rank": "b5",
       "solvedCount": 24
     },
+    "seoyulgim79": {
+      "rank": "b5",
+      "solvedCount": 23
+    },
     "ywkim0421": {
       "rank": "b4",
       "solvedCount": 21
-    },
-    "seoyulgim79": {
-      "rank": "b5",
-      "solvedCount": 18
     },
     "minseok0529": {
       "rank": "b5",
@@ -226,5 +226,5 @@
       "solvedCount": null
     }
   },
-  "lastUpdate": "2026-03-20T06:02:33.160Z"
+  "lastUpdate": "Fri Mar 20 2026 08:52:50 GMT+0000 (Coordinated Universal Time)"
 }
