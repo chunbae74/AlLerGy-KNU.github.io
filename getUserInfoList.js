@@ -73,7 +73,13 @@ async function getUserInfoList() {
                         const preSolvedCount = Number(preUserInfo['solvedCount']);
                         const nowSolvedCount = Number(userInfo['solvedCount']);
                         if (nowSolvedCount < 100) {
-
+                            if (Math.floor(preSolved / 10) != Math.floor(nowSolvedCount / 10)) {
+                                news['log'].unshift({
+                                    date: today,
+                                    userId: userId,
+                                    text: `${(Math.floor(nowSolvedCount / 10)*10).toLocaleString()}문제 해결 !`
+                                });
+                            }
                         } else {
                             if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
                                 news['log'].unshift({
