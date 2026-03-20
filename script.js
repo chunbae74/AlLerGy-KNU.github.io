@@ -36,6 +36,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         const jsonData = await response.json();
         const users = jsonData.users;
 
+        // 전체 멤버 수 표기
+        const memberTitle = document.getElementById("memberTitle");
+        if (memberTitle) memberTitle.innerHTML = `멤버 (${Object.keys(users).length}명)`;
+
+
         Object.entries(users).forEach(([solvedId, info]) => {
             const { rank, solvedCount } = info;
 
