@@ -7,10 +7,10 @@ const itemsPerPage = 10;
  */
 async function init() {
     try {
-        const response = await fetch('./history.json');
+        const response = await fetch('./news.json');
         
         if (!response.ok) {
-            throw new Error(`[historyScript.js] 데이터를 불러오지 못했습니다. 상태: ${response.status}`);
+            throw new Error(`[newsScript.js] 데이터를 불러오지 못했습니다. 상태: ${response.status}`);
         }
 
         // json() 역시 비동기이므로 await가 필요합니다.
