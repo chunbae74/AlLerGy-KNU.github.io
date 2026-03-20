@@ -3,7 +3,7 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": "d4",
-      "solvedCount": 2808
+      "solvedCount": 2809
     },
     "cubic": {
       "rank": "d3",
@@ -147,7 +147,7 @@
     },
     "seongjun0215": {
       "rank": "b1",
-      "solvedCount": 56
+      "solvedCount": 57
     },
     "patrick101817": {
       "rank": "s5",
@@ -161,6 +161,10 @@
       "rank": "b4",
       "solvedCount": 32
     },
+    "seoyulgim79": {
+      "rank": "b5",
+      "solvedCount": 27
+    },
     "ahs226ahs": {
       "rank": "b3",
       "solvedCount": 27
@@ -169,17 +173,13 @@
       "rank": "b4",
       "solvedCount": 25
     },
+    "ywkim0421": {
+      "rank": "b3",
+      "solvedCount": 24
+    },
     "valk": {
       "rank": "b5",
       "solvedCount": 24
-    },
-    "seoyulgim79": {
-      "rank": "b5",
-      "solvedCount": 23
-    },
-    "ywkim0421": {
-      "rank": "b4",
-      "solvedCount": 21
     },
     "minseok0529": {
       "rank": "b5",
@@ -226,5 +226,5 @@
       "solvedCount": null
     }
   },
-  "lastUpdate": "Fri Mar 20 2026 09:51:32 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Fri Mar 20 2026 12:34:00 GMT+0000 (Coordinated Universal Time)"
 }
