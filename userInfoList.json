@@ -55,7 +55,7 @@
     },
     "k2akr7": {
       "rank": "g2",
-      "solvedCount": 236
+      "solvedCount": 237
     },
     "mule129": {
       "rank": "g3",
@@ -161,12 +161,12 @@
       "rank": "b4",
       "solvedCount": 32
     },
-    "seoyulgim79": {
-      "rank": "b5",
-      "solvedCount": 27
-    },
     "ahs226ahs": {
       "rank": "b3",
+      "solvedCount": 28
+    },
+    "seoyulgim79": {
+      "rank": "b5",
       "solvedCount": 27
     },
     "rlaehgns123": {
@@ -226,5 +226,5 @@
       "solvedCount": 1
     }
   },
-  "lastUpdate": "Fri Mar 20 2026 13:41:11 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Fri Mar 20 2026 13:44:01 GMT+0000 (Coordinated Universal Time)"
 }
