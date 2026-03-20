@@ -28,11 +28,22 @@ async function init() {
 }
 
 function renderLogs(page) {
-    if (!logData || !logData.log) return;
-
+    // 데이터 부재 시 예외 처리 (이전 요청사항 포함)
     const container = document.getElementById('log-container');
     container.innerHTML = '';
-    
+
+    if (!logData || !logData.log || logData.log.length === 0) {
+        container.innerHTML = `
+            <div class="py-20 text-center">
+                <p class="text-xl font-semibold text-slate-400">
+                    앗, 아직 아무 변경사항도 없어요...
+                </p>
+            </div>
+        `;
+        updateUI(true);
+        return;
+    }
+
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
     const pagedData = logData.log.slice(start, end);
@@ -45,12 +56,18 @@ function renderLogs(page) {
             day: '2-digit'
         }).replace(/\.$/, "");
 
+        // 리다이렉트할 주소
+        const profileUrl = `https://solved.ac/profile/${item.userId}`;
+
         const card = document.createElement('div');
         card.className = "log-item bg-white p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4";
         
         card.innerHTML = `
             <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight">
-                ${item.text}
+                <a href="${profileUrl}" target="_blank" rel="noopener noreferrer" 
+                   class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1">
+                    @${item.userId}
+                </a>님, ${item.text}
             </h2>
             <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter">
                 ${dateStr}
@@ -59,7 +76,7 @@ function renderLogs(page) {
         container.appendChild(card);
     });
 
-    updateUI();
+    updateUI(false);
 }
 
 function updateUI() {
@@ -69,7 +86,7 @@ function updateUI() {
     document.getElementById('next-btn').disabled = currentPage === totalPages;
     
     const lastUpdateDate = new Date(logData.lastUpdate).toLocaleDateString();
-    document.getElementById('last-update').innerText = `Last updated · ${lastUpdateDate}`;
+    document.getElementById('last-update').innerText = `Last updated:  ${lastUpdateDate}<br>※ 활동 이력은 매일 자정에 업데이트됩니다.`;
 }
 
 function setupEventListeners() {
