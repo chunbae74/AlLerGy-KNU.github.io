@@ -55,7 +55,7 @@ function renderLogs(page) {
             day: '2-digit'
         }).replace(/\.$/, "");
 
-        const profileUrl = `https://solved.ac/profile/${item.id}`;
+        const profileUrl = `https://solved.ac/profile/${item.userId}`;
 
         const card = document.createElement('div');
         // 중요: h2에 가로 크기 제한을 인지할 수 있도록 스몰 디바이스 설정을 유지합니다.
