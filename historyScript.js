@@ -57,7 +57,7 @@ function renderLogs(page) {
         }).replace(/\.$/, "");
 
         // 리다이렉트할 주소
-        const profileUrl = `https://solved.ac/profile/${item.userId}`;
+        const profileUrl = `https://solved.ac/profile/${item.id}`;
 
         const card = document.createElement('div');
         card.className = "log-item bg-white p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4";
@@ -66,7 +66,7 @@ function renderLogs(page) {
             <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight">
                 <a href="${profileUrl}" target="_blank" rel="noopener noreferrer" 
                    class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1">
-                    @${item.userId}
+                    @${item.id}
                 </a>님, ${item.text}
             </h2>
             <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter">
@@ -86,7 +86,7 @@ function updateUI() {
     document.getElementById('next-btn').disabled = currentPage === totalPages;
     
     const lastUpdateDate = new Date(logData.lastUpdate).toLocaleDateString();
-    document.getElementById('last-update').innerText = `Last updated:  ${lastUpdateDate}<br>※ 활동 이력은 매일 자정에 업데이트됩니다.`;
+    document.getElementById('last-update').innerText = `Last updated:  ${lastUpdateDate}\n※ 활동 이력은 매일 자정에 업데이트됩니다.`;
 }
 
 function setupEventListeners() {
