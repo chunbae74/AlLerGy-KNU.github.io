@@ -13,6 +13,7 @@ async function init() {
             throw new Error(`[historyScript.js] 데이터를 불러오지 못했습니다. 상태: ${response.status}`);
         }
 
+        // json() 역시 비동기이므로 await가 필요합니다.
         logData = await response.json();
         
         // 데이터 로드 완료 후 첫 화면 렌더링
@@ -29,11 +30,6 @@ async function init() {
 function renderLogs(page) {
     if (!logData || !logData.log) return;
 
-    if (logData.length < 1) {
-        document.getElementById('log-container').innerHTML = 
-            `<p class="text-center text-red-500 py-10">앗! 아직 변경사항이 없어요...</p>`;
-        return;
-    }
     const container = document.getElementById('log-container');
     container.innerHTML = '';
     
@@ -54,7 +50,7 @@ function renderLogs(page) {
         
         card.innerHTML = `
             <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight">
-                [${item.userId}] ${item.text}
+                ${item.text}
             </h2>
             <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter">
                 ${dateStr}

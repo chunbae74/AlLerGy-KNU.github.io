@@ -795,33 +795,3 @@ footer {
     height: 10px;
   }
 }
-
-/* 로그 출력 페이지 css */
-@import url('https://fonts.googleapis.com/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css');
-
-body { 
-    font-family: 'SUIT Variable', sans-serif; 
-    background-color: #fcfdfe; 
-    color: #1e293b;
-}
-
-/* 로그 아이템 애니메이션 및 효과 */
-.log-item { 
-    animation: fadeIn 0.4s ease-out;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.log-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8); /* 은은한 푸른 빛 그림자 */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 버튼 비활성화 시 커서 변경 */
-button:disabled {
-    cursor: not-allowed;
-}
