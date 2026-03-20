@@ -3,100 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlLerGy - Activity Log</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Activity Log Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+    </style>
 </head>
-<body>
+<body class="p-4 md:p-8">
 
-    <header class="show">
-        <div class="header-allergy-mom">
-            <div class="header-allergy">AlLerGy</div>
-            <nav class="header-g">
-                <a href="#hero">Home</a>
-                <a href="#activity-log">Activity Log</a>
-            </nav>
+<div id="app" class="max-w-3xl mx-auto">
+    <header class="mb-8 flex justify-between items-end">
+        <div>
+            <h1 class="text-2xl font-bold text-slate-800">활동 로그</h1>
+            <p class="text-sm text-slate-500 mt-1" id="last-update"></p>
         </div>
+        <div class="text-xs font-medium text-slate-400 uppercase tracking-wider" id="page-info"></div>
     </header>
 
-    <main>
-        <section id="hero">
-            <div class="hero-div">
-                <div class="hero-div-div1">LOG</div>
-                <div class="hero-div-div2">최근 <span class="hero-blue">활동 업데이트</span> 현황</div>
-            </div>
-        </section>
-
-        <section id="activity-log">
-            <div class="history-box">
-                <div class="history-box-left">
-                    RECENT<br>UPDATES
-                </div>
-                
-                <div class="history-box-right">
-                    <div class="history-box-right-line"></div>
-                    <div class="history-box-right-text" id="log-container">
-                        </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-box">
-            <div class="footer-box-info">AlLerGy KNU</div>
-            <div class="footer-box-context">
-                마지막 업데이트: <span id="last-update">-</span>
-            </div>
+    <div id="log-container" class="space-y-4">
         </div>
-    </footer>
 
-    <script>
-        // 제공해주신 JSON 데이터 예시
-        const data = {
-            "log": [
-                {
-                    "date": "Fri Mar 20 2026 17:48:37 GMT+0900",
-                    "id": "dnjsgudtjr11",
-                    "text": "문제 2,800개 해결!!"
-                },
-                {
-                    "date": "Fri Mar 20 2026 17:48:37 GMT+0900",
-                    "id": "soumatou",
-                    "text": "문제 700개 해결!!"
-                },
-                {
-                    "date": "Fri Mar 20 2026 17:48:10 GMT+0900",
-                    "id": "dnjsgudtjr11",
-                    "text": "티어 상승! (d3 → d4)"
-                }
-            ],
-            "lastUpdate": "Fri Mar 20 2026 17:48:37 GMT+0900"
-        };
+    <div class="mt-10 flex justify-center items-center gap-4">
+        <button id="prev-btn" class="p-2 rounded-full hover:bg-white hover:shadow-sm transition-all disabled:opacity-30">
+            <i data-lucide="chevron-left"></i>
+        </button>
+        <div id="pagination-numbers" class="flex gap-2"></div>
+        <button id="next-btn" class="p-2 rounded-full hover:bg-white hover:shadow-sm transition-all disabled:opacity-30">
+            <i data-lucide="chevron-right"></i>
+        </button>
+    </div>
+</div>
 
-        function renderLogs() {
-            const container = document.getElementById('log-container');
-            const lastUpdateSpan = document.getElementById('last-update');
+<script>
+    // 제공해주신 JSON 데이터 형식
+    const data = {
+        "log": [
+            { "date": "Fri Mar 20 2026 17:48:37 GMT+0900", "id": "dnjsgudtjr11", "text": "문제 2,800개 해결!!" },
+            { "date": "Fri Mar 20 2026 17:48:37 GMT+0900", "id": "soumatou", "text": "문제 700개 해결!!" },
+            { "date": "Fri Mar 20 2026 17:48:10 GMT+0900", "id": "dnjsgudtjr11", "text": "티어 상승! (d3 → d4)" }
+            // 테스트를 위해 데이터가 더 많다고 가정하고 페이지네이션이 작동합니다.
+        ],
+        "lastUpdate": "Fri Mar 20 2026 17:48:37 GMT+0900"
+    };
+
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    function renderLogs(page) {
+        const container = document.getElementById('log-container');
+        container.innerHTML = '';
+        
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const pagedData = data.log.slice(start, end);
+
+        pagedData.forEach(item => {
+            const dateObj = new Date(item.date);
+            const timeStr = dateObj.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
             
-            lastUpdateSpan.innerText = new Date(data.lastUpdate).toLocaleString();
-
-            container.innerHTML = data.log.map(item => {
-                // 날짜 포맷팅 (예: 17:48:37)
-                const timeStr = new Date(item.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                
-                return `
-                    <div class="history-box-right-text-box">
-                        <div class="history-box-right-text-box-title">
-                            ${item.id} <span style="font-size: 0.6em; color: #804eff; margin-left: 10px;">${timeStr}</span>
-                        </div>
-                        <div class="history-box-right-text-box-text">
-                            ${item.text}
-                        </div>
+            const isTierUp = item.text.includes('티어');
+            
+            const card = document.createElement('div');
+            card.className = "bg-white p-5 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4";
+            
+            card.innerHTML = `
+                <div class="flex items-start gap-4">
+                    <div class="p-2 rounded-lg ${isTierUp ? 'bg-amber-50 text-amber-600' : 'bg-blue-50 text-blue-600'}">
+                        <i data-lucide="${isTierUp ? 'trending-up' : 'check-circle-2'}" class="w-5 h-5"></i>
                     </div>
-                `;
-            }).join('');
-        }
+                    <div>
+                        <p class="font-semibold text-slate-800">${item.text}</p>
+                        <p class="text-sm text-slate-500 mt-1 flex items-center gap-2">
+                            <span class="font-medium text-slate-700 underline decoration-slate-200 underline-offset-4">${item.id}</span>
+                            <span class="text-slate-300">|</span>
+                            <span>${timeStr}</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="text-[11px] text-slate-400 bg-slate-50 px-2 py-1 rounded md:self-center self-start">
+                    ${dateObj.toLocaleDateString()}
+                </div>
+            `;
+            container.appendChild(card);
+        });
 
-        window.onload = renderLogs;
-    </script>
+        updatePagination();
+        lucide.createIcons();
+    }
+
+    function updatePagination() {
+        const totalPages = Math.ceil(data.log.length / itemsPerPage);
+        document.getElementById('page-info').innerText = `Page ${currentPage} of ${totalPages || 1}`;
+        document.getElementById('prev-btn').disabled = currentPage === 1;
+        document.getElementById('next-btn').disabled = currentPage === totalPages || totalPages === 0;
+        
+        // 마지막 업데이트 시간 표시
+        document.getElementById('last-update').innerText = `최근 업데이트: ${new Date(data.lastUpdate).toLocaleString()}`;
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        if (currentPage > 1) { currentPage--; renderLogs(currentPage); }
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+        const totalPages = Math.ceil(data.log.length / itemsPerPage);
+        if (currentPage < totalPages) { currentPage++; renderLogs(currentPage); }
+    });
+
+    // 초기 실행
+    renderLogs(currentPage);
+</script>
+
 </body>
 </html>
