@@ -53,30 +53,29 @@ body {
     box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
 }
 
-/* 모바일 전용 스타일 (화면 너비 768px 미만) */
+/* 모바일 전용 스타일 수정 */
 @media (max-width: 767px) {
     .log-item h2 {
-        /* 글자 크기를 작게 조절 (기존보다 작게) */
-        font-size: 1.1rem !important; 
-        /* 한 줄 유지를 위한 핵심 설정 */
-        white-space: nowrap; 
-        overflow: hidden;
-        text-overflow: ellipsis; /* 글자가 너무 길면 ... 처리 */
-        flex-shrink: 1;
+        /* 한 줄 유지를 위해 nowrap은 필수입니다. */
+        white-space: nowrap !important;
+        /* ellipsis(점점점)는 제거합니다. */
+        text-overflow: clip !important; 
+        overflow: visible !important;
+        display: inline-block !important;
+        width: auto !important; /* 자바스크립트가 너비를 측정할 수 있게 함 */
     }
     
     .log-item {
-        /* 모바일에서 좌우 패딩을 살짝 줄여 공간 확보 */
         padding: 1rem !important;
-        /* 날짜와 한 줄에 배치하기 위해 flex-direction 유지 */
         flex-direction: row !important;
         align-items: center !important;
-        justify-content: space-between !important;
+        justify-content: flex-start !important; /* 내용 정렬 */
+        gap: 10px !important;
     }
 
     .log-item time {
-        font-size: 0.75rem !important;
-        margin-top: 0 !important;
+        font-size: 0.7rem !important;
+        margin-left: auto; /* 날짜를 오른쪽 끝으로 밀어냄 */
     }
 }
 
