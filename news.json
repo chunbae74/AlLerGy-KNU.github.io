@@ -1,6 +1,26 @@
 {
     "log": [
         {
+            "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "text": "30문제 해결 !"
+        },
+        {
+            "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seoyulgim79",
+            "text": "30문제 해결 !"
+        },
+        {
+            "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seoyulgim79",
+            "text": "티어 상승 ! (b5 → b3)"
+        },
+        {
+            "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
+            "userId": "tnfls",
+            "text": "40문제 해결 !"
+        },
+        {
             "date": "Sat Mar 21 2026 11:07:36 GMT+0900 (Korean Standard Time)",
             "userId": "lni",
             "text": "90문제 해결 !"
@@ -11,5 +31,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Sat Mar 21 2026 02:10:48 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)"
 }
