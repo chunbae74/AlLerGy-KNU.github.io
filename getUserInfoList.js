@@ -69,24 +69,26 @@ async function getUserInfoList() {
                             });
                         }
 
-                        // n백번째 문제풀이 달성 히스토리
-                        const preSolvedCount = Number(preUserInfo['solvedCount']);
-                        const nowSolvedCount = Number(userInfo['solvedCount']);
-                        if (nowSolvedCount < 100) {
-                            if (Math.floor(preSolvedCount / 10) != Math.floor(nowSolvedCount / 10)) {
-                                news['log'].unshift({
-                                    date: today,
-                                    userId: userId,
-                                    text: `${(Math.floor(nowSolvedCount / 10)*10).toLocaleString()}문제 해결 !`
-                                });
-                            }
-                        } else {
-                            if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
-                                news['log'].unshift({
-                                    date: today,
-                                    userId: userId,
-                                    text: `${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}문제 해결 !`
-                                });
+                        if (userInfo['solvedCount'] != null) {
+                            // n백번째 문제풀이 달성 히스토리
+                            const preSolvedCount = Number(preUserInfo['solvedCount']);
+                            const nowSolvedCount = Number(userInfo['solvedCount']);
+                            if (preSolvedCount < 100 && nowSolvedCount < 100) {
+                                if (Math.floor(preSolvedCount / 10) != Math.floor(nowSolvedCount / 10)) {
+                                    news['log'].unshift({
+                                        date: today,
+                                        userId: userId,
+                                        text: `${(Math.floor(nowSolvedCount / 10)*10).toLocaleString()}문제 해결 !`
+                                    });
+                                }
+                            } else {
+                                if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
+                                    news['log'].unshift({
+                                        date: today,
+                                        userId: userId,
+                                        text: `${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}문제 해결 !`
+                                    });
+                                }
                             }
                         }
                     }
