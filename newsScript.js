@@ -117,7 +117,7 @@ function updateUI(isEmpty) {
         
         const lastUpdateDate = new Date(logData.lastUpdate).toLocaleDateString();
         // 줄바꿈 적용을 위해 innerHTML 사용
-        lastUpdateElement.innerHTML = `Last updated: ${lastUpdateDate}<br><span class="text-[11px] opacity-70">※ News는 매일 자정에 업데이트됩니다.</span>`;
+        lastUpdateElement.innerHTML = `Last updated: ${lastUpdateDate}<br><span class="text-[11px] opacity-70">※ News는 매일 17:30에 업데이트됩니다.</span>`;
     }
 }
 
