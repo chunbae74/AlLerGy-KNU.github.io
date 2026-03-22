@@ -1,6 +1,66 @@
 {
     "log": [
         {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "text": "티어 상승 ! (b5 → b4)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "nogtac",
+            "text": "90문제 해결 !"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "nogtac",
+            "text": "티어 상승 ! (s5 → s4)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "lni",
+            "text": "100문제 해결 !"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "parkha0623",
+            "text": "90문제 해결 !"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "minseok0529",
+            "text": "20문제 해결 !"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "minseok0529",
+            "text": "티어 상승 ! (b5 → b4)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "tnfls",
+            "text": "티어 상승 ! (b3 → b2)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "hyun021218",
+            "text": "티어 상승 ! (s1 → g5)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seoyulgim79",
+            "text": "40문제 해결 !"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seoyulgim79",
+            "text": "티어 상승 ! (b3 → b2)"
+        },
+        {
+            "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seungyeon89",
+            "text": "40문제 해결 !"
+        },
+        {
             "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
             "userId": "ahs226ahs",
             "text": "30문제 해결 !"
@@ -31,5 +91,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)"
 }
