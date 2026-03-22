@@ -2,7 +2,7 @@ name: Daily Baekjoon Crawling
 
 on:
   schedule:
-    - cron: '0 15 * * *' # 매일 한국 시간 00시 (UTC 15시)
+    - cron: '30 8 * * *' # 매일 한국 시간 17:30 (UTC 08:30)
   push:
     branches: [ main ] # 코드가 push될 때도 실행
 
