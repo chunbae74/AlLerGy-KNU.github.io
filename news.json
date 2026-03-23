@@ -1,6 +1,56 @@
 {
     "log": [
         {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "minseok0529",
+            "text": "30문제 해결 !"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "minseok0529",
+            "text": "티어 상승 ! (b4 → b3)"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seungyeon89",
+            "text": "티어 상승 ! (b3 → b2)"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "tnfls",
+            "text": "50문제 해결 !"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "lni",
+            "text": "티어 상승 ! (s4 → s3)"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "text": "30문제 해결 !"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "chwon318",
+            "text": "10문제 해결 !"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "chwon318",
+            "text": "티어 상승 ! (unranked → b5)"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "azxc113",
+            "text": "티어 상승 ! (s2 → s1)"
+        },
+        {
+            "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
+            "userId": "parkha0623",
+            "text": "티어 상승 ! (s3 → s2)"
+        },
+        {
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
             "text": "티어 상승 ! (b5 → b4)"
@@ -91,5 +141,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Sun Mar 22 2026 15:04:18 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)"
 }
