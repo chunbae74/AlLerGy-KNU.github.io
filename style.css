@@ -1,4 +1,28 @@
 /* 전체 페이지 스크롤바 */
+.news-fab {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #e0f2fe; /* blue-100 */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6; /* blue-500 */
+    box-shadow: 0 4px 12px rgba(186, 230, 253, 0.4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.news-fab:hover {
+    transform: scale(1.1);
+    background-color: #eff6ff; /* blue-50 */
+    box-shadow: 0 6px 16px rgba(186, 230, 253, 0.6);
+}
+
 ::-webkit-scrollbar {
   width: 6px; /* 세로 스크롤바 너비 */
   height: 6px; /* 가로 스크롤바 높이 */
@@ -139,15 +163,6 @@ footer {
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
-}
-.header-allergy-mom {
-  display: flex;
-  flex-direction: row;
-  gap: 80px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
 }
 
 /* ==============================
@@ -793,5 +808,11 @@ footer {
     left: -30.5px; /* 간격을 좁힌 만큼 동그라미(점) 위치도 당겨줌 */
     width: 10px; /* 동그라미 크기도 살짝 작게 */
     height: 10px;
+  }
+  .news-fab {
+    top: 15px;
+    left: 15px;
+    width: 44px;
+    height: 44px;
   }
 }
