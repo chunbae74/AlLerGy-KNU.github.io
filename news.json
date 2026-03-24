@@ -1,6 +1,6 @@
 {
     "log": [
-           {
+        {
             "type": "solved",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "ywkim0421",
@@ -36,7 +36,7 @@
             "type": "solved",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
-            "solvedCount" : 30
+            "solvedCount": 30
         },
         {
             "type": "tier",
@@ -214,5 +214,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Tue Mar 24 2026 08:19:19 GMT+0000 (Coordinated Universal Time)"
 }
