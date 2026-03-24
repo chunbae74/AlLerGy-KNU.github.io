@@ -49,16 +49,24 @@ function renderLogs(page) {
     const pagedData = logData.log.slice(start, end);
 
     pagedData.forEach(item => {
-        // ... (날짜 처리 로직 동일)
+        const dateObj = new Date(item.date);
+        const dateStr = dateObj.toLocaleDateString('ko-KR', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).replace(/\.$/, "");
+
+        const profileUrl = `https://solved.ac/profile/${item.userId}`;
 
         const card = document.createElement('div');
+        
         // items-center를 추가하여 내부의 모든 요소가 수직 중앙에 오도록 설정
         card.className = "log-item bg-white px-4 py-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-row items-center justify-between gap-2 overflow-hidden min-h-[80px]";
         
         let contentHtml = ""; 
         if (item.type == "tier") {
-            const preTierImg = `<img src="./img/rank/${ranks[item.preTier]}.svg" alt="${item.preTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
-            const nowTierImg = `<img src="./img/rank/${ranks[item.nowTier]}.svg" alt="${item.nowTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
+            const preTierImg = `<img src="./img/rank/${item.preTier}.svg" alt="${item.preTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
+            const nowTierImg = `<img src="./img/rank/${item.nowTier}.svg" alt="${item.nowTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
             contentHtml = `티어 상승! ${preTierImg} <span class="text-slate-400 mx-0.5">→</span> ${nowTierImg}`;
         } else if (item.type == "solved") {
             contentHtml = `${item.solvedCount} 문제 해결!`;
