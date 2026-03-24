@@ -1,6 +1,31 @@
 {
     "log": [
         {
+            "date": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)",
+            "userId": "yedam1119",
+            "text": "10문제 해결 !"
+        },
+        {
+            "date": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "text": "티어 상승 ! (b4 → b3)"
+        },
+        {
+            "date": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ywkim0421",
+            "text": "30문제 해결 !"
+        },
+        {
+            "date": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ohjh8446",
+            "text": "80문제 해결 !"
+        },
+        {
+            "date": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ohjh8446",
+            "text": "티어 상승 ! (s5 → s4)"
+        },
+        {
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
             "text": "30문제 해결 !"
@@ -141,5 +166,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)"
 }

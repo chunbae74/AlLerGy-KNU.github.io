@@ -3,15 +3,15 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": "d4",
-      "solvedCount": 2824
+      "solvedCount": 2833
     },
     "cubic": {
       "rank": "d3",
-      "solvedCount": 1927
+      "solvedCount": 1929
     },
     "chunbae74": {
       "rank": "p4",
-      "solvedCount": 921
+      "solvedCount": 922
     },
     "hjkiln": {
       "rank": "g1",
@@ -47,7 +47,7 @@
     },
     "wschoi789": {
       "rank": "g3",
-      "solvedCount": 304
+      "solvedCount": 311
     },
     "qwer0987": {
       "rank": "g3",
@@ -55,7 +55,7 @@
     },
     "k2akr7": {
       "rank": "g2",
-      "solvedCount": 247
+      "solvedCount": 250
     },
     "mule129": {
       "rank": "g3",
@@ -91,7 +91,7 @@
     },
     "gym0219": {
       "rank": "s2",
-      "solvedCount": 140
+      "solvedCount": 143
     },
     "kgh398": {
       "rank": "s1",
@@ -99,39 +99,43 @@
     },
     "lwtr": {
       "rank": "s4",
-      "solvedCount": 127
+      "solvedCount": 129
     },
     "lni": {
       "rank": "s3",
-      "solvedCount": 112
+      "solvedCount": 113
     },
     "binhan1e3": {
       "rank": "s1",
       "solvedCount": 103
     },
-    "gudwn9779": {
-      "rank": "s4",
-      "solvedCount": 96
-    },
     "nogtac": {
       "rank": "s4",
-      "solvedCount": 95
+      "solvedCount": 99
+    },
+    "gudwn9779": {
+      "rank": "s4",
+      "solvedCount": 98
     },
     "parkha0623": {
       "rank": "s2",
-      "solvedCount": 94
+      "solvedCount": 95
     },
     "ohjh8446": {
-      "rank": "s5",
-      "solvedCount": 78
+      "rank": "s4",
+      "solvedCount": 81
     },
     "kwon4774": {
       "rank": "s5",
-      "solvedCount": 74
+      "solvedCount": 75
     },
     "fcsolution11": {
       "rank": "s2",
       "solvedCount": 71
+    },
+    "alclssha4665": {
+      "rank": "s4",
+      "solvedCount": 69
     },
     "ellie050908": {
       "rank": "s5",
@@ -141,17 +145,13 @@
       "rank": "s5",
       "solvedCount": 64
     },
-    "alclssha4665": {
-      "rank": "s4",
-      "solvedCount": 63
-    },
     "seongjun0215": {
       "rank": "b1",
       "solvedCount": 59
     },
     "tnfls": {
       "rank": "b2",
-      "solvedCount": 50
+      "solvedCount": 53
     },
     "seoyulgim79": {
       "rank": "b2",
@@ -163,35 +163,47 @@
     },
     "patrick101817": {
       "rank": "s5",
-      "solvedCount": 44
+      "solvedCount": 45
+    },
+    "valk": {
+      "rank": "b3",
+      "solvedCount": 39
     },
     "minseok0529": {
       "rank": "b3",
-      "solvedCount": 36
+      "solvedCount": 38
     },
     "ahs226ahs": {
       "rank": "b3",
       "solvedCount": 34
     },
-    "valk": {
-      "rank": "b4",
-      "solvedCount": 34
-    },
     "ywkim0421": {
       "rank": "b3",
-      "solvedCount": 27
+      "solvedCount": 30
     },
     "rlaehgns123": {
       "rank": "b4",
-      "solvedCount": 25
+      "solvedCount": 26
     },
     "dbstjgus07": {
       "rank": "b5",
-      "solvedCount": 15
+      "solvedCount": 16
     },
     "chwon318": {
       "rank": "b5",
-      "solvedCount": 11
+      "solvedCount": 13
+    },
+    "yedam1119": {
+      "rank": "unranked",
+      "solvedCount": 10
+    },
+    "hhsa00": {
+      "rank": "unranked",
+      "solvedCount": 8
+    },
+    "baebae07": {
+      "rank": "unranked",
+      "solvedCount": 7
     },
     "yeonguk4100": {
       "rank": "unranked",
@@ -200,10 +212,6 @@
     "rnynsxs": {
       "rank": "unranked",
       "solvedCount": 6
-    },
-    "baebae07": {
-      "rank": "unranked",
-      "solvedCount": 5
     },
     "es_836": {
       "rank": "unranked",
@@ -216,15 +224,7 @@
     "whitesun0326": {
       "rank": "unranked",
       "solvedCount": 3
-    },
-    "yedam1119": {
-      "rank": "unranked",
-      "solvedCount": 2
-    },
-    "hhsa00": {
-      "rank": "unranked",
-      "solvedCount": 2
     }
   },
-  "lastUpdate": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Tue Mar 24 2026 09:27:53 GMT+0000 (Coordinated Universal Time)"
 }
