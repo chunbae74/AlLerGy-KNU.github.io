@@ -135,7 +135,7 @@
     },
     "alclssha4665": {
       "rank": 7,
-      "solvedCount": 67
+      "solvedCount": 68
     },
     "ellie050908": {
       "rank": 6,
@@ -201,15 +201,15 @@
       "rank": 0,
       "solvedCount": 7
     },
+    "hhsa00": {
+      "rank": 0,
+      "solvedCount": 7
+    },
     "yeonguk4100": {
       "rank": 0,
       "solvedCount": 6
     },
     "rnynsxs": {
-      "rank": 0,
-      "solvedCount": 6
-    },
-    "hhsa00": {
       "rank": 0,
       "solvedCount": 6
     },
@@ -226,5 +226,5 @@
       "solvedCount": 3
     }
   },
-  "lastUpdate": "Tue Mar 24 2026 08:19:19 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Tue Mar 24 2026 08:26:31 GMT+0000 (Coordinated Universal Time)"
 }
