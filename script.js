@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         
         const jsonData = await response.json();
         const users = jsonData.users;
+        const ranks = ["unranked", "b5", "b4", "b3", "b2", "b1", "s5", "s4", "s3", "s2", "s1", "g5", "g4", "g3", "g2", "g1", "p5", "p4", "p3", "p2", "p1", "d5", "d4", "d3", "d2", "d1", "r5", "r4", "r3", "r2", "r1", "master"];
 
         // 전체 멤버 수 표기
         const memberTitle = document.getElementById("memberTitle");
@@ -42,7 +43,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
         Object.entries(users).forEach(([solvedId, info]) => {
-            const { rank, solvedCount } = info;
+            let { rank, solvedCount } = info;
+            rank = ranks[rank];
 
             // 지도교수 id
             if (solvedId == memberPage.professor.id) {

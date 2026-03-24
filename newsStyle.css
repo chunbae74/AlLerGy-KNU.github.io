@@ -52,38 +52,53 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
 }
+body { 
+    font-family: 'SUIT Variable', sans-serif; 
+    background-color: #fcfdfe; 
+    color: #1e293b;
+    overflow-x: hidden;
+}
 
-/* 모바일 전용 스타일 수정 */
+/* 로그 아이템 애니메이션 및 효과 */
+.log-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
+}
+
+.log-item {
+    display: flex !important;
+    align-items: center !important; /* 수직 중앙 정렬 강제 */
+    min-height: 70px; /* 모바일에서 카드가 너무 납작해지지 않게 설정 */
+}
+
+.tier-icon {
+    height: 1.2em; /* 폰트 크기보다 살짝 크게 설정 */
+    width: auto;
+    margin: 0 4px;
+    display: inline-block;
+    /* 텍스트와 라인을 맞추기 위해 정렬 수정 */
+    vertical-align: middle; 
+    position: relative;
+    top: -1px; 
+}
+
+/* 모바일 전용 스타일 최적화 */
 @media (max-width: 767px) {
-    .log-item h2 {
-        /* 한 줄 유지를 위해 nowrap은 필수입니다. */
-        white-space: nowrap !important;
-        /* ellipsis(점점점)는 제거합니다. */
-        text-overflow: clip !important; 
-        overflow: visible !important;
-        display: inline-block !important;
-        width: auto !important; /* 자바스크립트가 너비를 측정할 수 있게 함 */
-    }
-    
     .log-item {
-        padding: 1rem !important;
-        flex-direction: row !important;
+        padding: 0.75rem 1rem !important;
+        gap: 8px !important;
+    }
+
+    .log-item h2 {
+        /* flex-shrink를 방지하여 글자가 찌그러지지 않게 함 */
+        flex-shrink: 1;
+        display: flex !important;
         align-items: center !important;
-        justify-content: flex-start !important; /* 내용 정렬 */
-        gap: 10px !important;
     }
 
     .log-item time {
-        font-size: 0.7rem !important;
-        margin-left: auto; /* 날짜를 오른쪽 끝으로 밀어냄 */
+        /* 날짜가 너무 위로 붙지 않도록 조정 */
+        align-self: center; 
+        margin-top: 2px;
     }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-button:disabled {
-    cursor: not-allowed;
 }
