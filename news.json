@@ -1,170 +1,218 @@
 {
     "log": [
-        {
+           {
+            "type": "solved",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "ywkim0421",
-            "text": "30문제 해결 !"
+            "solvedCount": 30
         },
         {
+            "type": "tier",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
-            "text": "티어 상승 ! (b4 → b3)"
+            "preTier": 2,
+            "nowTier": 3
         },
         {
+            "type": "solved",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "yedam1119",
-            "text": "10문제 해결 !"
+            "solvedCount": 10
         },
         {
+            "type": "solved",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "ohjh8446",
-            "text": "80문제 해결 !"
+            "solvedCount": 80
         },
         {
+            "type": "tier",
             "date": "Tue Mar 24 2026 07:50:30 GMT+0000 (Coordinated Universal Time)",
             "userId": "ohjh8446",
-            "text": "티어 상승 ! (s5 → s4)"
+            "preTier": 6,
+            "nowTier": 7
         },
         {
+            "type": "solved",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
-            "text": "30문제 해결 !"
+            "solvedCount" : 30
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
-            "text": "티어 상승 ! (b4 → b3)"
+            "preTier": 2,
+            "nowTier": 3
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "seungyeon89",
-            "text": "티어 상승 ! (b3 → b2)"
+            "preTier": 3,
+            "nowTier": 4
         },
         {
+            "type": "solved",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "tnfls",
-            "text": "50문제 해결 !"
+            "solvedCount": 50
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "lni",
-            "text": "티어 상승 ! (s4 → s3)"
+            "preTier": 7,
+            "nowTier": 8
         },
         {
+            "type": "solved",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
-            "text": "30문제 해결 !"
+            "solvedCount": 30
         },
         {
+            "type": "solved",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "chwon318",
-            "text": "10문제 해결 !"
+            "solvedCount": 10
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "chwon318",
-            "text": "티어 상승 ! (unranked → b5)"
+            "preTier": 0,
+            "nowTier": 1
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "azxc113",
-            "text": "티어 상승 ! (s2 → s1)"
+            "preTier": 9,
+            "nowTier": 10
         },
         {
+            "type": "tier",
             "date": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "parkha0623",
-            "text": "티어 상승 ! (s3 → s2)"
+            "preTier": 8,
+            "nowTier": 9
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
-            "text": "티어 상승 ! (b5 → b4)"
+            "preTier": 1,
+            "nowTier": 2
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "nogtac",
-            "text": "90문제 해결 !"
+            "solvedCount": 90
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "nogtac",
-            "text": "티어 상승 ! (s5 → s4)"
+            "preTier": 6,
+            "nowTier": 7
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "lni",
-            "text": "100문제 해결 !"
+            "solvedCount": 100
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "parkha0623",
-            "text": "90문제 해결 !"
+            "solvedCount": 90
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
-            "text": "20문제 해결 !"
+            "solvedCount": 20
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "minseok0529",
-            "text": "티어 상승 ! (b5 → b4)"
+            "preTier": 1,
+            "nowTier": 2
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "tnfls",
-            "text": "티어 상승 ! (b3 → b2)"
+            "preTier": 3,
+            "nowTier": 4
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "hyun021218",
-            "text": "티어 상승 ! (s1 → g5)"
+            "preTier": 10,
+            "nowTier": 11
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "seoyulgim79",
-            "text": "40문제 해결 !"
+            "solvedCount": 40
         },
         {
+            "type": "tier",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "seoyulgim79",
-            "text": "티어 상승 ! (b3 → b2)"
+            "preTier": 3,
+            "nowTier": 4
         },
         {
+            "type": "solved",
             "date": "Sun Mar 22 2026 15:03:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "seungyeon89",
-            "text": "40문제 해결 !"
+            "solvedCount": 40
         },
         {
+            "type": "solved",
             "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
             "userId": "ahs226ahs",
-            "text": "30문제 해결 !"
+            "solvedCount": 30
         },
         {
+            "type": "solved",
             "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
             "userId": "seoyulgim79",
-            "text": "30문제 해결 !"
+            "solvedCount": 30
         },
         {
+            "type": "tier",
             "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
             "userId": "seoyulgim79",
-            "text": "티어 상승 ! (b5 → b3)"
+            "preTier": 1,
+            "nowTier": 3
         },
         {
+            "type": "solved",
             "date": "Sat Mar 21 2026 15:14:14 GMT+0000 (Coordinated Universal Time)",
             "userId": "tnfls",
-            "text": "40문제 해결 !"
+            "solvedCount": 40
         },
         {
+            "type": "solved",
             "date": "Sat Mar 21 2026 11:07:36 GMT+0900 (Korean Standard Time)",
             "userId": "lni",
-            "text": "90문제 해결 !"
+            "solvedCount": 90
         },
         {
+            "type": "notice",
             "date": "Fri Mar 20 2026 17:48:37 GMT+0900 (Korean Standard Time)",
             "userId": "chunbae74",
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Tue Mar 24 2026 08:16:25 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Mon Mar 23 2026 09:36:29 GMT+0000 (Coordinated Universal Time)"
 }
