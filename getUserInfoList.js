@@ -17,8 +17,6 @@ const headers = {
     'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
 };
 
-const ranks = ["unranked", "b5", "b4", "b3", "b2", "b1", "s5", "s4", "s3", "s2", "s1", "g5", "g4", "g3", "g2", "g1", "p5", "p4", "p3", "p2", "p1", "d5", "d4", "d3", "d2", "d1", "r5", "r4", "r3", "r2", "r1", "master"];
-
 async function getUserInfoList() {
     try {
         // 이 프로그램이 촤초로 실행되었는가
@@ -54,14 +52,14 @@ async function getUserInfoList() {
                  *티어 변동 확인 및 n백번째 문제풀이 진행
                  ************
                 */
-               /*
+               
                 if (hasPreUserInfo) {
                     if (preUserInfoList['users'][userId]) {
                         const preUserInfo = preUserInfoList['users'][userId];
                         
                         // 티어 변동 확인
-                        const preTier = preUserInfo['rank'];
-                        const nowTier = ranks[userInfo['tier']];
+                        const preTier = Number(preUserInfo['rank']);
+                        const nowTier = Number(userInfo['tier']);
                         if (preTier != nowTier) {
                             news['log'].unshift({
                                 type: "tier",
@@ -79,24 +77,26 @@ async function getUserInfoList() {
                             if (preSolvedCount < 100 && nowSolvedCount < 100) {
                                 if (Math.floor(preSolvedCount / 10) != Math.floor(nowSolvedCount / 10)) {
                                     news['log'].unshift({
+                                        type: "solved",
                                         date: today,
                                         userId: userId,
-                                        text: `${(Math.floor(nowSolvedCount / 10)*10).toLocaleString()}문제 해결 !`
+                                        solvedCount: nowSolvedCount
                                     });
                                 }
                             } else {
                                 if (Math.floor(preSolvedCount / 100) != Math.floor(nowSolvedCount / 100)) {
                                     news['log'].unshift({
+                                        type: "solved",
                                         date: today,
                                         userId: userId,
-                                        text: `${(Math.floor(nowSolvedCount / 100)*100).toLocaleString()}문제 해결 !`
+                                        solvedCount: nowSolvedCount
                                     });
                                 }
                             }
                         }
                     }
                 }
-                */
+                
                 return {
                     userId: userId,
                     data: {
