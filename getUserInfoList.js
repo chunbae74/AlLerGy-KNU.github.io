@@ -19,7 +19,6 @@ const headers = {
 
 async function getUserInfoList() {
     try {
-        // 이 프로그램이 촤초로 실행되었는가
         let hasPreUserInfo = true;
         let userIdList = JSON.parse(fs.readFileSync(path['userIdList'], 'utf8')); // userIdList
         let preUserInfoList = null; // 업데이트 이전의 userInfoList
@@ -80,7 +79,7 @@ async function getUserInfoList() {
                                         type: "solved",
                                         date: today,
                                         userId: userId,
-                                        solvedCount: nowSolvedCount
+                                        solvedCount: Math.floor(nowSolvedCount / 10) * 10
                                     });
                                 }
                             } else {
@@ -89,7 +88,7 @@ async function getUserInfoList() {
                                         type: "solved",
                                         date: today,
                                         userId: userId,
-                                        solvedCount: nowSolvedCount
+                                        solvedCount: Math.floor(nowSolvedCount / 100) * 100
                                     });
                                 }
                             }
