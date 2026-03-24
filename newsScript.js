@@ -65,8 +65,8 @@ function renderLogs(page) {
         
         let contentHtml = ""; 
         if (item.type == "tier") {
-            const preTierImg = `<img src="./img/rank/${item.preTier}.svg" alt="${item.preTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
-            const nowTierImg = `<img src="./img/rank/${item.nowTier}.svg" alt="${item.nowTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
+            const preTierImg = `<img src="./img/rank/${ranks[item.preTier]}.svg" alt="${item.preTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
+            const nowTierImg = `<img src="./img/rank/${ranks[item.nowTier]}.svg" alt="${item.nowTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
             contentHtml = `티어 상승! ${preTierImg} <span class="text-slate-400 mx-0.5">→</span> ${nowTierImg}`;
         } else if (item.type == "solved") {
             contentHtml = `${item.solvedCount} 문제 해결!`;
