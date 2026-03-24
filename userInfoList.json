@@ -103,7 +103,7 @@
     },
     "lni": {
       "rank": 8,
-      "solvedCount": 112
+      "solvedCount": 113
     },
     "binhan1e3": {
       "rank": 10,
@@ -135,7 +135,7 @@
     },
     "alclssha4665": {
       "rank": 7,
-      "solvedCount": 68
+      "solvedCount": 69
     },
     "ellie050908": {
       "rank": 6,
@@ -151,7 +151,7 @@
     },
     "tnfls": {
       "rank": 4,
-      "solvedCount": 51
+      "solvedCount": 53
     },
     "seoyulgim79": {
       "rank": 4,
@@ -191,17 +191,17 @@
     },
     "chwon318": {
       "rank": 1,
-      "solvedCount": 11
+      "solvedCount": 13
     },
     "yedam1119": {
       "rank": 0,
       "solvedCount": 10
     },
-    "baebae07": {
-      "rank": 0,
-      "solvedCount": 7
-    },
     "hhsa00": {
+      "rank": 0,
+      "solvedCount": 8
+    },
+    "baebae07": {
       "rank": 0,
       "solvedCount": 7
     },
@@ -226,5 +226,5 @@
       "solvedCount": 3
     }
   },
-  "lastUpdate": "Tue Mar 24 2026 08:26:31 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Tue Mar 24 2026 08:59:14 GMT+0000 (Coordinated Universal Time)"
 }
