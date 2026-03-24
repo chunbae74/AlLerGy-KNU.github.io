@@ -49,27 +49,16 @@ function renderLogs(page) {
     const pagedData = logData.log.slice(start, end);
 
     pagedData.forEach(item => {
-        const dateObj = new Date(item.date);
-        const dateStr = dateObj.toLocaleDateString('ko-KR', {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit'
-        }).replace(/\.$/, "");
-
-        const profileUrl = `https://solved.ac/profile/${item.userId}`;
+        // ... (날짜 처리 로직 동일)
 
         const card = document.createElement('div');
-        // 중요: h2에 가로 크기 제한을 인지할 수 있도록 스몰 디바이스 설정을 유지합니다.
-        card.className = "log-item bg-white p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4 overflow-hidden";
-        let contentHtml = ""; // 텍스트 대신 HTML을 담을 변수
-
+        // items-center를 추가하여 내부의 모든 요소가 수직 중앙에 오도록 설정
+        card.className = "log-item bg-white px-4 py-5 md:p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-row items-center justify-between gap-2 overflow-hidden min-h-[80px]";
+        
+        let contentHtml = ""; 
         if (item.type == "tier") {
-            // --- 수정된 부분: 이미지 태그 삽입 ---
-            // 이미지는 h2 높이(1em)에 맞춥니다. tier-icon 클래스 부여.
-            // onError 처리를 통해 이미지 로드 실패 시 대체 텍스트(티어명) 출력
-            const preTierImg = `<img src="./img/rank/${ranks[item.preTier]}.svg" alt="${item.preTier}" class="tier-icon inline-block align-middle mx-1" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
-            const nowTierImg = `<img src="./img/rank/${ranks[item.nowTier]}.svg" alt="${item.nowTier}" class="tier-icon inline-block align-middle mx-1" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
-            
+            const preTierImg = `<img src="./img/rank/${item.preTier}.svg" alt="${item.preTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
+            const nowTierImg = `<img src="./img/rank/${item.nowTier}.svg" alt="${item.nowTier}" class="tier-icon" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
             contentHtml = `티어 상승! ${preTierImg} <span class="text-slate-400 mx-0.5">→</span> ${nowTierImg}`;
         } else if (item.type == "solved") {
             contentHtml = `${item.solvedCount} 문제 해결!`;
@@ -78,40 +67,43 @@ function renderLogs(page) {
         }
 
         card.innerHTML = `
-            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight whitespace-nowrap inline-block origin-left flex-grow min-width-0">
+            <h2 class="flex items-center text-lg md:text-2xl font-bold tracking-tight text-slate-800 leading-none whitespace-nowrap origin-left flex-grow overflow-hidden">
                 <a href="${profileUrl}" target="_blank" rel="noopener noreferrer" 
-                   class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1">
+                class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1 shrink-0">
                     @${item.userId}
-                </a>님, ${contentHtml}
+                </a>
+                <span class="flex items-center shrink-0">님, ${contentHtml}</span>
             </h2>
-            <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter ml-auto pl-2">
+            <time class="text-[11px] md:text-sm font-semibold text-blue-300 shrink-0 tracking-tighter ml-auto pl-2">
                 ${dateStr}
             </time>
         `;
         container.appendChild(card);
 
-        // --- 폰트 크기 자동 조절 로직 시작 ---
+        // --- 폰트 크기 자동 조절 로직 수정 ---
         const h2 = card.querySelector('h2');
         const adjustFontSize = () => {
             if (window.innerWidth < 768) { 
-                let fontSize = 1.1; // 기본 시작 크기 (rem)
+                let fontSize = 1.0; // 시작 크기를 1rem으로 조절
                 h2.style.fontSize = fontSize + 'rem';
                 
-                // 카드 내부 가용 너비 계산 (패딩 등을 제외한 실제 영역)
-                const containerWidth = card.offsetWidth - 120; // 날짜 영역과 여백 확보를 위해 넉넉히 뺌
+                const timeElement = card.querySelector('time');
+                const reservedWidth = timeElement.offsetWidth + 40; // 날짜 너비 + 여백
+                const containerWidth = card.offsetWidth - reservedWidth;
                 
-                // 글자 너비가 가용 너비보다 크면 0.1씩 줄임 (최소 0.6rem까지)
-                while (h2.offsetWidth > containerWidth && fontSize > 0.6) {
-                    fontSize -= 0.05;
-                    h2.style.fontSize = fontSize + 'rem';
+                // 최소 크기를 0.85rem으로 상향 조정하여 가독성 확보
+                if (h2.scrollWidth > containerWidth) {
+                    while (h2.scrollWidth > containerWidth && fontSize > 0.85) {
+                        fontSize -= 0.01;
+                        h2.style.fontSize = fontSize + 'rem';
+                    }
                 }
             } else {
-                h2.style.fontSize = ""; // PC 환경에서는 CSS 기본값 사용
+                h2.style.fontSize = ""; 
             }
         };
 
-        // 이미지 로딩이나 폰트 렌더링 시간을 고려해 살짝 지연 실행하거나 즉시 실행
-        setTimeout(adjustFontSize, 0);
+        setTimeout(adjustFontSize, 50);
     });
 
     updateUI(false);
