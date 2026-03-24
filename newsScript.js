@@ -1,6 +1,7 @@
 let logData = null; // 데이터를 저장할 전역 변수
 let currentPage = 1;
 const itemsPerPage = 10;
+const ranks = ["unranked", "b5", "b4", "b3", "b2", "b1", "s5", "s4", "s3", "s2", "s1", "g5", "g4", "g3", "g2", "g1", "p5", "p4", "p3", "p2", "p1", "d5", "d4", "d3", "d2", "d1", "r5", "r4", "r3", "r2", "r1", "master"];
 
 /**
  * 초기화 함수: 데이터를 불러온 후 첫 페이지를 렌더링합니다.
@@ -60,23 +61,30 @@ function renderLogs(page) {
         const card = document.createElement('div');
         // 중요: h2에 가로 크기 제한을 인지할 수 있도록 스몰 디바이스 설정을 유지합니다.
         card.className = "log-item bg-white p-6 rounded-2xl border border-blue-100 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-4 overflow-hidden";
-        let text = "";
+        let contentHtml = ""; // 텍스트 대신 HTML을 담을 변수
+
         if (item.type == "tier") {
-            text = `티어 상승! (${item.preTier} -> ${item.nowTier})`;
+            // --- 수정된 부분: 이미지 태그 삽입 ---
+            // 이미지는 h2 높이(1em)에 맞춥니다. tier-icon 클래스 부여.
+            // onError 처리를 통해 이미지 로드 실패 시 대체 텍스트(티어명) 출력
+            const preTierImg = `<img src="./img/rank/${ranks[item.preTier]}.svg" alt="${item.preTier}" class="tier-icon inline-block align-middle mx-1" onerror="this.style.display='none'; this.after('${item.preTier}')">`;
+            const nowTierImg = `<img src="./img/rank/${ranks[item.nowTier]}.svg" alt="${item.nowTier}" class="tier-icon inline-block align-middle mx-1" onerror="this.style.display='none'; this.after('${item.nowTier}')">`;
+            
+            contentHtml = `티어 상승! ${preTierImg} <span class="text-slate-400 mx-0.5">→</span> ${nowTierImg}`;
         } else if (item.type == "solved") {
-            text = `${item.solvedCount} 문제 해결!`;
+            contentHtml = `${item.solvedCount} 문제 해결!`;
         } else if (item.type == "notice") {
-            text = item.text;
+            contentHtml = item.text;
         }
 
         card.innerHTML = `
-            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight whitespace-nowrap inline-block origin-left">
+            <h2 class="text-xl md:text-2xl font-bold tracking-tight text-slate-800 leading-tight whitespace-nowrap inline-block origin-left flex-grow min-width-0">
                 <a href="${profileUrl}" target="_blank" rel="noopener noreferrer" 
                    class="text-blue-500 hover:text-blue-700 hover:underline transition-colors mr-1">
                     @${item.userId}
-                </a>님, ${text}
+                </a>님, ${contentHtml}
             </h2>
-            <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter ml-auto">
+            <time class="text-sm font-semibold text-blue-300 shrink-0 tracking-tighter ml-auto pl-2">
                 ${dateStr}
             </time>
         `;

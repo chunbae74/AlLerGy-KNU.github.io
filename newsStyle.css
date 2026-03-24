@@ -52,38 +52,57 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
 }
+body { 
+    font-family: 'SUIT Variable', sans-serif; 
+    background-color: #fcfdfe; 
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* 티어 아이콘 스타일 추가 */
+.tier-icon {
+    /* 핵심: 높이를 1em으로 설정하여 부모 h2의 font-size를 그대로 따르게 함 */
+    height: 1em; 
+    width: auto; /* 비율 유지 */
+    /* 글자들과의 수직 정렬 맞춤 */
+    vertical-align: -0.15em; 
+    display: inline-block;
+}
+
+/* 로그 아이템 애니메이션 및 효과 */
+.log-item { 
+    animation: fadeIn 0.4s ease-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.log-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 246, 255, 0.8);
+}
 
 /* 모바일 전용 스타일 수정 */
 @media (max-width: 767px) {
     .log-item h2 {
-        /* 한 줄 유지를 위해 nowrap은 필수입니다. */
         white-space: nowrap !important;
-        /* ellipsis(점점점)는 제거합니다. */
         text-overflow: clip !important; 
         overflow: visible !important;
         display: inline-block !important;
-        width: auto !important; /* 자바스크립트가 너비를 측정할 수 있게 함 */
+        width: auto !important; 
     }
     
     .log-item {
         padding: 1rem !important;
-        flex-direction: row !important;
-        align-items: center !important;
-        justify-content: flex-start !important; /* 내용 정렬 */
-        gap: 10px !important;
+        /* JS에서 이미 flex-row, items-center를 적용했으므로 강제 지정 해제 */
+        /* flex-direction: row !important; */
+        /* align-items: center !important; */
+        justify-content: flex-start !important;
+        gap: 0px !important; /* gap 대신 time에 padding-left 사용 */
     }
 
     .log-item time {
-        font-size: 0.7rem !important;
-        margin-left: auto; /* 날짜를 오른쪽 끝으로 밀어냄 */
+        font-size: 0.75rem !important; /* 살짝 키움 */
+        margin-left: auto !important; /* 오른쪽 끝 정렬 유지 */
+        padding-left: 8px; /* 텍스트와의 최소 간격 */
+        color: #94a3b8 !important; /* text-slate-400으로 가독성 확보 */
     }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-button:disabled {
-    cursor: not-allowed;
 }
