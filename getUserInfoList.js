@@ -54,6 +54,7 @@ async function getUserInfoList() {
                  *티어 변동 확인 및 n백번째 문제풀이 진행
                  ************
                 */
+               /*
                 if (hasPreUserInfo) {
                     if (preUserInfoList['users'][userId]) {
                         const preUserInfo = preUserInfoList['users'][userId];
@@ -63,9 +64,11 @@ async function getUserInfoList() {
                         const nowTier = ranks[userInfo['tier']];
                         if (preTier != nowTier) {
                             news['log'].unshift({
+                                type: "tier",
                                 date: today,
                                 userId: userId,
-                                text: `티어 상승 ! (${preTier} → ${nowTier})`
+                                preTier: preTier,
+                                nowTier: nowTier
                             });
                         }
 
@@ -93,11 +96,11 @@ async function getUserInfoList() {
                         }
                     }
                 }
-
+                */
                 return {
                     userId: userId,
                     data: {
-                        rank: ranks[userInfo['tier']],
+                        rank: userInfo['tier'],
                         solvedCount: userInfo['solvedCount']
                     }
                 };
