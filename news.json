@@ -2,6 +2,25 @@
     "log": [
         {
             "type": "solved",
+            "date": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "seungyeon89",
+            "solvedCount": 50
+        },
+        {
+            "type": "solved",
+            "date": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "solvedCount": 40
+        },
+        {
+            "type": "tier",
+            "date": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "preTier": 3,
+            "nowTier": 4
+        },
+        {
+            "type": "solved",
             "date": "Tue Mar 24 2026 14:20:42 GMT+0000 (Coordinated Universal Time)",
             "userId": "nogtac",
             "solvedCount": 100
@@ -232,5 +251,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Tue Mar 24 2026 14:27:36 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)"
 }

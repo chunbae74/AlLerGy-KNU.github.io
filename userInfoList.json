@@ -3,11 +3,11 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": 22,
-      "solvedCount": 2834
+      "solvedCount": 2840
     },
     "cubic": {
       "rank": 23,
-      "solvedCount": 1931
+      "solvedCount": 1933
     },
     "chunbae74": {
       "rank": 17,
@@ -27,7 +27,7 @@
     },
     "gylim7826": {
       "rank": 14,
-      "solvedCount": 552
+      "solvedCount": 555
     },
     "jjh4450": {
       "rank": 17,
@@ -63,7 +63,7 @@
     },
     "hyun021218": {
       "rank": 11,
-      "solvedCount": 224
+      "solvedCount": 225
     },
     "glue0440": {
       "rank": 13,
@@ -85,17 +85,17 @@
       "rank": 9,
       "solvedCount": 173
     },
+    "gym0219": {
+      "rank": 9,
+      "solvedCount": 146
+    },
     "azxc113": {
       "rank": 10,
       "solvedCount": 146
     },
-    "gym0219": {
-      "rank": 9,
-      "solvedCount": 143
-    },
     "kgh398": {
       "rank": 10,
-      "solvedCount": 132
+      "solvedCount": 133
     },
     "lwtr": {
       "rank": 7,
@@ -105,17 +105,17 @@
       "rank": 8,
       "solvedCount": 115
     },
+    "gudwn9779": {
+      "rank": 7,
+      "solvedCount": 105
+    },
     "binhan1e3": {
       "rank": 10,
       "solvedCount": 103
     },
-    "gudwn9779": {
-      "rank": 7,
-      "solvedCount": 103
-    },
     "nogtac": {
       "rank": 7,
-      "solvedCount": 101
+      "solvedCount": 102
     },
     "parkha0623": {
       "rank": 9,
@@ -123,7 +123,7 @@
     },
     "ohjh8446": {
       "rank": 7,
-      "solvedCount": 81
+      "solvedCount": 82
     },
     "kwon4774": {
       "rank": 6,
@@ -153,21 +153,21 @@
       "rank": 4,
       "solvedCount": 53
     },
+    "seungyeon89": {
+      "rank": 4,
+      "solvedCount": 50
+    },
     "seoyulgim79": {
       "rank": 4,
       "solvedCount": 48
     },
-    "seungyeon89": {
-      "rank": 4,
-      "solvedCount": 47
-    },
     "patrick101817": {
       "rank": 6,
-      "solvedCount": 47
+      "solvedCount": 48
     },
     "valk": {
-      "rank": 3,
-      "solvedCount": 39
+      "rank": 4,
+      "solvedCount": 42
     },
     "minseok0529": {
       "rank": 3,
@@ -226,5 +226,5 @@
       "solvedCount": 3
     }
   },
-  "lastUpdate": "Tue Mar 24 2026 14:27:36 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)"
 }
