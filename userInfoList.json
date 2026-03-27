@@ -3,11 +3,11 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": 22,
-      "solvedCount": 2844
+      "solvedCount": 2851
     },
     "cubic": {
       "rank": 23,
-      "solvedCount": 1938
+      "solvedCount": 1939
     },
     "chunbae74": {
       "rank": 17,
@@ -27,7 +27,7 @@
     },
     "gylim7826": {
       "rank": 14,
-      "solvedCount": 555
+      "solvedCount": 557
     },
     "jjh4450": {
       "rank": 17,
@@ -37,17 +37,17 @@
       "rank": 19,
       "solvedCount": 521
     },
-    "kye04250425": {
+    "wschoi789": {
       "rank": 13,
-      "solvedCount": 316
+      "solvedCount": 320
     },
     "kjis0518": {
       "rank": 14,
-      "solvedCount": 316
+      "solvedCount": 319
     },
-    "wschoi789": {
+    "kye04250425": {
       "rank": 13,
-      "solvedCount": 315
+      "solvedCount": 316
     },
     "qwer0987": {
       "rank": 13,
@@ -59,19 +59,19 @@
     },
     "hyun021218": {
       "rank": 11,
-      "solvedCount": 229
+      "solvedCount": 230
     },
     "mule129": {
       "rank": 13,
       "solvedCount": 227
     },
+    "gunyu1019": {
+      "rank": 15,
+      "solvedCount": 223
+    },
     "glue0440": {
       "rank": 13,
       "solvedCount": 222
-    },
-    "gunyu1019": {
-      "rank": 15,
-      "solvedCount": 220
     },
     "bswoo04": {
       "rank": 10,
@@ -79,7 +79,7 @@
     },
     "kim03881968": {
       "rank": 14,
-      "solvedCount": 181
+      "solvedCount": 182
     },
     "mouiye": {
       "rank": 9,
@@ -87,31 +87,31 @@
     },
     "gym0219": {
       "rank": 9,
-      "solvedCount": 149
+      "solvedCount": 151
     },
     "azxc113": {
       "rank": 10,
       "solvedCount": 146
     },
+    "lwtr": {
+      "rank": 8,
+      "solvedCount": 141
+    },
     "kgh398": {
       "rank": 10,
       "solvedCount": 137
     },
-    "lwtr": {
-      "rank": 7,
-      "solvedCount": 136
-    },
     "lni": {
       "rank": 8,
-      "solvedCount": 124
+      "solvedCount": 130
     },
     "gudwn9779": {
       "rank": 8,
-      "solvedCount": 112
+      "solvedCount": 119
     },
     "nogtac": {
       "rank": 7,
-      "solvedCount": 108
+      "solvedCount": 111
     },
     "binhan1e3": {
       "rank": 10,
@@ -119,19 +119,19 @@
     },
     "parkha0623": {
       "rank": 9,
-      "solvedCount": 97
+      "solvedCount": 98
     },
     "ohjh8446": {
       "rank": 7,
       "solvedCount": 87
     },
+    "alclssha4665": {
+      "rank": 8,
+      "solvedCount": 81
+    },
     "kwon4774": {
       "rank": 6,
       "solvedCount": 80
-    },
-    "alclssha4665": {
-      "rank": 7,
-      "solvedCount": 76
     },
     "fcsolution11": {
       "rank": 9,
@@ -157,6 +157,10 @@
       "rank": 4,
       "solvedCount": 55
     },
+    "minseok0529": {
+      "rank": 4,
+      "solvedCount": 50
+    },
     "seoyulgim79": {
       "rank": 4,
       "solvedCount": 48
@@ -167,19 +171,15 @@
     },
     "dbstjgus07": {
       "rank": 4,
-      "solvedCount": 46
+      "solvedCount": 47
     },
     "valk": {
       "rank": 4,
       "solvedCount": 46
     },
-    "minseok0529": {
-      "rank": 3,
-      "solvedCount": 42
-    },
     "ywkim0421": {
       "rank": 4,
-      "solvedCount": 39
+      "solvedCount": 42
     },
     "ahs226ahs": {
       "rank": 3,
@@ -187,7 +187,11 @@
     },
     "rlaehgns123": {
       "rank": 2,
-      "solvedCount": 30
+      "solvedCount": 32
+    },
+    "hhsa00": {
+      "rank": 1,
+      "solvedCount": 19
     },
     "es_836": {
       "rank": 1,
@@ -199,11 +203,7 @@
     },
     "yedam1119": {
       "rank": 0,
-      "solvedCount": 14
-    },
-    "hhsa00": {
-      "rank": 1,
-      "solvedCount": 13
+      "solvedCount": 17
     },
     "baebae07": {
       "rank": 0,
@@ -211,7 +211,7 @@
     },
     "rnynsxs": {
       "rank": 0,
-      "solvedCount": 10
+      "solvedCount": 11
     },
     "2dahee": {
       "rank": 0,
@@ -223,8 +223,8 @@
     },
     "whitesun0326": {
       "rank": 0,
-      "solvedCount": 4
+      "solvedCount": 5
     }
   },
-  "lastUpdate": "Thu Mar 26 2026 09:33:28 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Fri Mar 27 2026 09:13:48 GMT+0000 (Coordinated Universal Time)"
 }
