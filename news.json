@@ -1,6 +1,39 @@
 {
     "log": [
         {
+            "type": "tier",
+            "date": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)",
+            "userId": "rlaehgns123",
+            "preTier": 3,
+            "nowTier": 4
+        },
+        {
+            "type": "solved",
+            "date": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "solvedCount": 40
+        },
+        {
+            "type": "tier",
+            "date": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "preTier": 3,
+            "nowTier": 5
+        },
+        {
+            "type": "solved",
+            "date": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ywkim0421",
+            "solvedCount": 60
+        },
+        {
+            "type": "tier",
+            "date": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ywkim0421",
+            "preTier": 5,
+            "nowTier": 6
+        },
+        {
             "type": "solved",
             "date": "Tue Mar 31 2026 09:39:29 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
@@ -568,5 +601,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Tue Mar 31 2026 09:39:29 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Wed Apr 01 2026 09:45:13 GMT+0000 (Coordinated Universal Time)"
 }
