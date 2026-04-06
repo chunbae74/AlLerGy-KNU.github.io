@@ -2,6 +2,63 @@
     "log": [
         {
             "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "alclssha4665",
+            "solvedCount": 90
+        },
+        {
+            "type": "tier",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "lwtr",
+            "preTier": 8,
+            "nowTier": 9
+        },
+        {
+            "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "minseok0529",
+            "solvedCount": 100
+        },
+        {
+            "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "fcsolution11",
+            "solvedCount": 80
+        },
+        {
+            "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "patrick101817",
+            "solvedCount": 60
+        },
+        {
+            "type": "tier",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "patrick101817",
+            "preTier": 6,
+            "nowTier": 7
+        },
+        {
+            "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "solvedCount": 80
+        },
+        {
+            "type": "tier",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "tnfls",
+            "preTier": 6,
+            "nowTier": 7
+        },
+        {
+            "type": "solved",
+            "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ywkim0421",
+            "solvedCount": 80
+        },
+        {
+            "type": "solved",
             "date": "Sun Apr 05 2026 09:07:12 GMT+0000 (Coordinated Universal Time)",
             "userId": "yeonguk4100",
             "solvedCount": 10
@@ -740,5 +797,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Sun Apr 05 2026 09:07:12 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)"
 }
