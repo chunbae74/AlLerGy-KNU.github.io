@@ -1,6 +1,19 @@
 {
     "log": [
         {
+            "type": "tier",
+            "date": "Tue Apr 07 2026 09:43:20 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ywkim0421",
+            "preTier": 6,
+            "nowTier": 7
+        },
+        {
+            "type": "solved",
+            "date": "Tue Apr 07 2026 09:43:20 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "solvedCount": 80
+        },
+        {
             "type": "solved",
             "date": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)",
             "userId": "alclssha4665",
@@ -797,5 +810,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Mon Apr 06 2026 09:47:12 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Tue Apr 07 2026 09:43:20 GMT+0000 (Coordinated Universal Time)"
 }
