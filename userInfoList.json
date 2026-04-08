@@ -3,11 +3,11 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": 22,
-      "solvedCount": 2919
+      "solvedCount": 2923
     },
     "cubic": {
       "rank": 23,
-      "solvedCount": 1977
+      "solvedCount": 1979
     },
     "chunbae74": {
       "rank": 17,
@@ -37,13 +37,13 @@
       "rank": 19,
       "solvedCount": 521
     },
+    "wschoi789": {
+      "rank": 13,
+      "solvedCount": 338
+    },
     "kjis0518": {
       "rank": 14,
       "solvedCount": 338
-    },
-    "wschoi789": {
-      "rank": 13,
-      "solvedCount": 337
     },
     "kye04250425": {
       "rank": 13,
@@ -51,7 +51,7 @@
     },
     "k2akr7": {
       "rank": 14,
-      "solvedCount": 290
+      "solvedCount": 291
     },
     "qwer0987": {
       "rank": 13,
@@ -81,11 +81,11 @@
       "rank": 10,
       "solvedCount": 196
     },
-    "mouiye": {
-      "rank": 9,
-      "solvedCount": 173
-    },
     "lni": {
+      "rank": 9,
+      "solvedCount": 174
+    },
+    "mouiye": {
       "rank": 9,
       "solvedCount": 173
     },
@@ -95,7 +95,7 @@
     },
     "lwtr": {
       "rank": 9,
-      "solvedCount": 164
+      "solvedCount": 169
     },
     "azxc113": {
       "rank": 10,
@@ -125,6 +125,10 @@
       "rank": 10,
       "solvedCount": 103
     },
+    "ahs226ahs": {
+      "rank": 7,
+      "solvedCount": 94
+    },
     "ohjh8446": {
       "rank": 7,
       "solvedCount": 91
@@ -133,9 +137,9 @@
       "rank": 8,
       "solvedCount": 91
     },
-    "ahs226ahs": {
+    "valk": {
       "rank": 6,
-      "solvedCount": 86
+      "solvedCount": 91
     },
     "tnfls": {
       "rank": 7,
@@ -150,10 +154,6 @@
       "solvedCount": 82
     },
     "kwon4774": {
-      "rank": 6,
-      "solvedCount": 82
-    },
-    "valk": {
       "rank": 6,
       "solvedCount": 82
     },
@@ -181,17 +181,17 @@
       "rank": 5,
       "solvedCount": 55
     },
+    "rlaehgns123": {
+      "rank": 5,
+      "solvedCount": 53
+    },
     "seoyulgim79": {
       "rank": 4,
       "solvedCount": 53
     },
-    "rlaehgns123": {
-      "rank": 5,
-      "solvedCount": 49
-    },
     "hhsa00": {
-      "rank": 3,
-      "solvedCount": 41
+      "rank": 4,
+      "solvedCount": 50
     },
     "yedam1119": {
       "rank": 1,
@@ -226,5 +226,5 @@
       "solvedCount": 8
     }
   },
-  "lastUpdate": "Tue Apr 07 2026 09:43:20 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Wed Apr 08 2026 09:44:24 GMT+0000 (Coordinated Universal Time)"
 }
