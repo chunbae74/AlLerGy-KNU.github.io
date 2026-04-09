@@ -2,6 +2,45 @@
     "log": [
         {
             "type": "solved",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "solvedCount": 100
+        },
+        {
+            "type": "tier",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "valk",
+            "preTier": 6,
+            "nowTier": 7
+        },
+        {
+            "type": "tier",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "rlaehgns123",
+            "preTier": 5,
+            "nowTier": 6
+        },
+        {
+            "type": "solved",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "solvedCount": 100
+        },
+        {
+            "type": "solved",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "baebae07",
+            "solvedCount": 20
+        },
+        {
+            "type": "tier",
+            "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
+            "userId": "nogtac",
+            "preTier": 8,
+            "nowTier": 9
+        },
+        {
+            "type": "solved",
             "date": "Wed Apr 08 2026 09:44:24 GMT+0000 (Coordinated Universal Time)",
             "userId": "ahs226ahs",
             "solvedCount": 90
@@ -848,5 +887,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Wed Apr 08 2026 09:44:24 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)"
 }
