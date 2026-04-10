@@ -1,6 +1,13 @@
 {
     "log": [
         {
+            "type": "tier",
+            "date": "Fri Apr 10 2026 09:45:50 GMT+0000 (Coordinated Universal Time)",
+            "userId": "ahs226ahs",
+            "preTier": 7,
+            "nowTier": 8
+        },
+        {
             "type": "solved",
             "date": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)",
             "userId": "valk",
@@ -887,5 +894,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Fri Apr 10 2026 09:45:50 GMT+0000 (Coordinated Universal Time)"
 }

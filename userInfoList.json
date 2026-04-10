@@ -3,7 +3,7 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": 22,
-      "solvedCount": 2934
+      "solvedCount": 2940
     },
     "cubic": {
       "rank": 23,
@@ -39,7 +39,7 @@
     },
     "wschoi789": {
       "rank": 13,
-      "solvedCount": 341
+      "solvedCount": 342
     },
     "kjis0518": {
       "rank": 14,
@@ -51,7 +51,7 @@
     },
     "k2akr7": {
       "rank": 14,
-      "solvedCount": 291
+      "solvedCount": 292
     },
     "qwer0987": {
       "rank": 13,
@@ -83,11 +83,15 @@
     },
     "lni": {
       "rank": 9,
-      "solvedCount": 177
+      "solvedCount": 179
     },
     "mouiye": {
       "rank": 9,
       "solvedCount": 173
+    },
+    "azxc113": {
+      "rank": 10,
+      "solvedCount": 172
     },
     "lwtr": {
       "rank": 9,
@@ -97,29 +101,25 @@
       "rank": 9,
       "solvedCount": 170
     },
-    "azxc113": {
-      "rank": 10,
-      "solvedCount": 165
-    },
     "gym0219": {
       "rank": 9,
       "solvedCount": 152
     },
     "kgh398": {
       "rank": 10,
-      "solvedCount": 147
+      "solvedCount": 149
     },
     "nogtac": {
       "rank": 9,
       "solvedCount": 138
     },
+    "ahs226ahs": {
+      "rank": 8,
+      "solvedCount": 121
+    },
     "parkha0623": {
       "rank": 9,
       "solvedCount": 116
-    },
-    "ahs226ahs": {
-      "rank": 7,
-      "solvedCount": 111
     },
     "minseok0529": {
       "rank": 7,
@@ -226,5 +226,5 @@
       "solvedCount": 8
     }
   },
-  "lastUpdate": "Thu Apr 09 2026 09:48:44 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Fri Apr 10 2026 09:45:50 GMT+0000 (Coordinated Universal Time)"
 }
