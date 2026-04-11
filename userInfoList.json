@@ -3,7 +3,7 @@
   "users": {
     "dnjsgudtjr11": {
       "rank": 22,
-      "solvedCount": 2940
+      "solvedCount": 2943
     },
     "cubic": {
       "rank": 23,
@@ -11,7 +11,7 @@
     },
     "chunbae74": {
       "rank": 17,
-      "solvedCount": 928
+      "solvedCount": 929
     },
     "hjkiln": {
       "rank": 15,
@@ -39,7 +39,7 @@
     },
     "wschoi789": {
       "rank": 13,
-      "solvedCount": 342
+      "solvedCount": 343
     },
     "kjis0518": {
       "rank": 14,
@@ -81,6 +81,10 @@
       "rank": 10,
       "solvedCount": 196
     },
+    "azxc113": {
+      "rank": 11,
+      "solvedCount": 179
+    },
     "lni": {
       "rank": 9,
       "solvedCount": 179
@@ -88,10 +92,6 @@
     "mouiye": {
       "rank": 9,
       "solvedCount": 173
-    },
-    "azxc113": {
-      "rank": 10,
-      "solvedCount": 172
     },
     "lwtr": {
       "rank": 9,
@@ -111,7 +111,7 @@
     },
     "nogtac": {
       "rank": 9,
-      "solvedCount": 138
+      "solvedCount": 139
     },
     "ahs226ahs": {
       "rank": 8,
@@ -123,7 +123,7 @@
     },
     "minseok0529": {
       "rank": 7,
-      "solvedCount": 104
+      "solvedCount": 105
     },
     "binhan1e3": {
       "rank": 10,
@@ -131,7 +131,11 @@
     },
     "valk": {
       "rank": 7,
-      "solvedCount": 100
+      "solvedCount": 102
+    },
+    "tnfls": {
+      "rank": 7,
+      "solvedCount": 92
     },
     "ohjh8446": {
       "rank": 7,
@@ -140,10 +144,6 @@
     "alclssha4665": {
       "rank": 8,
       "solvedCount": 91
-    },
-    "tnfls": {
-      "rank": 7,
-      "solvedCount": 88
     },
     "ywkim0421": {
       "rank": 7,
@@ -190,8 +190,8 @@
       "solvedCount": 53
     },
     "hhsa00": {
-      "rank": 4,
-      "solvedCount": 52
+      "rank": 5,
+      "solvedCount": 53
     },
     "yedam1119": {
       "rank": 1,
@@ -226,5 +226,5 @@
       "solvedCount": 8
     }
   },
-  "lastUpdate": "Fri Apr 10 2026 09:45:50 GMT+0000 (Coordinated Universal Time)"
+  "lastUpdate": "Sat Apr 11 2026 09:08:04 GMT+0000 (Coordinated Universal Time)"
 }
