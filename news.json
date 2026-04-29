@@ -1,5 +1,11 @@
 {
     "log": [
+         {
+            "type": "notice",
+            "date": "Tue Apr 28 2026 00:00:00 GMT+0900 (Korean Standard Time)",
+            "userId": "baekjoon",
+            "text": "Goodbye, BOJ!"
+        },
         {
             "type": "solved",
             "date": "Wed Apr 29 2026 20:15:22 GMT",
