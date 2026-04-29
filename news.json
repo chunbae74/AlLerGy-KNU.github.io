@@ -2,108 +2,6 @@
     "log": [
         {
             "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "hhsa00",
-            "solvedCount": 10
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "hhsa00",
-            "preTier": 0,
-            "nowTier": 1
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "minseok0529",
-            "solvedCount": 40
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "dbstjgus07",
-            "solvedCount": 30
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "dbstjgus07",
-            "preTier": 1,
-            "nowTier": 3
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "rnynsxs",
-            "solvedCount": 10
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "es_836",
-            "solvedCount": 10
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "es_836",
-            "preTier": 0,
-            "nowTier": 1
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "baebae07",
-            "solvedCount": 10
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "rlaehgns123",
-            "solvedCount": 30
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "tnfls",
-            "solvedCount": 60
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "tnfls",
-            "preTier": 4,
-            "nowTier": 5
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "ellie050908",
-            "solvedCount": 70
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "gudwn9779",
-            "preTier": 7,
-            "nowTier": 8
-        },
-        {
-            "type": "solved",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "kwon4774",
-            "solvedCount": 80
-        },
-        {
-            "type": "tier",
-            "date": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)",
-            "userId": "ywkim0421",
-            "preTier": 3,
-            "nowTier": 4
-        },
-        {
-            "type": "solved",
             "date": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)",
             "userId": "seungyeon89",
             "solvedCount": 50
@@ -353,5 +251,5 @@
             "text": "News 게시판 제작"
         }
     ],
-    "lastUpdate": "Thu Mar 26 2026 04:43:50 GMT+0000 (Coordinated Universal Time)"
+    "lastUpdate": "Wed Mar 25 2026 09:27:22 GMT+0000 (Coordinated Universal Time)"
 }
